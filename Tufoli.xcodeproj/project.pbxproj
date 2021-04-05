@@ -13,6 +13,13 @@
 		E8E5CECA261B3B7A007D39D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CEC8261B3B7A007D39D4 /* Main.storyboard */; };
 		E8E5CECC261B3B7C007D39D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CECB261B3B7C007D39D4 /* Assets.xcassets */; };
 		E8E5CECF261B3B7C007D39D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CECD261B3B7C007D39D4 /* LaunchScreen.storyboard */; };
+		E8E5CEE8261B56DA007D39D4 /* Lexend-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CEE1261B56D9007D39D4 /* Lexend-Thin.ttf */; };
+		E8E5CEE9261B56DA007D39D4 /* Lexend-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CEE2261B56D9007D39D4 /* Lexend-Regular.ttf */; };
+		E8E5CEEA261B56DA007D39D4 /* Lexend-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CEE3261B56DA007D39D4 /* Lexend-Light.ttf */; };
+		E8E5CEEB261B56DA007D39D4 /* Lexend-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CEE4261B56DA007D39D4 /* Lexend-Bold.ttf */; };
+		E8E5CEEC261B56DA007D39D4 /* Lexend-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CEE5261B56DA007D39D4 /* Lexend-SemiBold.ttf */; };
+		E8E5CEED261B56DA007D39D4 /* Lexend-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CEE6261B56DA007D39D4 /* Lexend-ExtraBold.ttf */; };
+		E8E5CEEE261B56DA007D39D4 /* Lexend-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CEE7261B56DA007D39D4 /* Lexend-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		E8E5CECB261B3B7C007D39D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8E5CECE261B3B7C007D39D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8E5CED0261B3B7C007D39D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8E5CEE1261B56D9007D39D4 /* Lexend-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Thin.ttf"; sourceTree = "<group>"; };
+		E8E5CEE2261B56D9007D39D4 /* Lexend-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Regular.ttf"; sourceTree = "<group>"; };
+		E8E5CEE3261B56DA007D39D4 /* Lexend-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Light.ttf"; sourceTree = "<group>"; };
+		E8E5CEE4261B56DA007D39D4 /* Lexend-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Bold.ttf"; sourceTree = "<group>"; };
+		E8E5CEE5261B56DA007D39D4 /* Lexend-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-SemiBold.ttf"; sourceTree = "<group>"; };
+		E8E5CEE6261B56DA007D39D4 /* Lexend-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E8E5CEE7261B56DA007D39D4 /* Lexend-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,62 @@
 		E8E5CEC1261B3B7A007D39D4 /* Tufoli */ = {
 			isa = PBXGroup;
 			children = (
+				E8E5CED7261B3D1A007D39D4 /* Model */,
+				E8E5CED8261B3D1F007D39D4 /* View */,
+				E8E5CED9261B3D2B007D39D4 /* Controller */,
 				E8E5CEC2261B3B7A007D39D4 /* AppDelegate.swift */,
 				E8E5CEC4261B3B7A007D39D4 /* SceneDelegate.swift */,
-				E8E5CEC6261B3B7A007D39D4 /* ViewController.swift */,
-				E8E5CEC8261B3B7A007D39D4 /* Main.storyboard */,
 				E8E5CECB261B3B7C007D39D4 /* Assets.xcassets */,
 				E8E5CECD261B3B7C007D39D4 /* LaunchScreen.storyboard */,
 				E8E5CED0261B3B7C007D39D4 /* Info.plist */,
+				E8E5CEDB261B4A13007D39D4 /* Fonts */,
+				E8E5CEDC261B4A20007D39D4 /* Sounds */,
 			);
 			path = Tufoli;
+			sourceTree = "<group>";
+		};
+		E8E5CED7261B3D1A007D39D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E8E5CED8261B3D1F007D39D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8E5CEC8261B3B7A007D39D4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8E5CED9261B3D2B007D39D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8E5CEC6261B3B7A007D39D4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E8E5CEDB261B4A13007D39D4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E8E5CEE4261B56DA007D39D4 /* Lexend-Bold.ttf */,
+				E8E5CEE6261B56DA007D39D4 /* Lexend-ExtraBold.ttf */,
+				E8E5CEE3261B56DA007D39D4 /* Lexend-Light.ttf */,
+				E8E5CEE7261B56DA007D39D4 /* Lexend-Medium.ttf */,
+				E8E5CEE2261B56D9007D39D4 /* Lexend-Regular.ttf */,
+				E8E5CEE5261B56DA007D39D4 /* Lexend-SemiBold.ttf */,
+				E8E5CEE1261B56D9007D39D4 /* Lexend-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		E8E5CEDC261B4A20007D39D4 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +186,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E5CECF261B3B7C007D39D4 /* LaunchScreen.storyboard in Resources */,
+				E8E5CEEA261B56DA007D39D4 /* Lexend-Light.ttf in Resources */,
 				E8E5CECC261B3B7C007D39D4 /* Assets.xcassets in Resources */,
+				E8E5CEED261B56DA007D39D4 /* Lexend-ExtraBold.ttf in Resources */,
+				E8E5CEEC261B56DA007D39D4 /* Lexend-SemiBold.ttf in Resources */,
+				E8E5CEE9261B56DA007D39D4 /* Lexend-Regular.ttf in Resources */,
 				E8E5CECA261B3B7A007D39D4 /* Main.storyboard in Resources */,
+				E8E5CEEE261B56DA007D39D4 /* Lexend-Medium.ttf in Resources */,
+				E8E5CEEB261B56DA007D39D4 /* Lexend-Bold.ttf in Resources */,
+				E8E5CEE8261B56DA007D39D4 /* Lexend-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
