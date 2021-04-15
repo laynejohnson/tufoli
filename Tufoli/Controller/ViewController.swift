@@ -23,6 +23,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Do any additional setup after loading the view.
         
         cardsArray = model.getCards()
+        
+        // Set the view controller as the datasource and delegate of the collection view
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     // MARK: - Collection View Delegate Methods
@@ -49,7 +53,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // dequeueReusableCell returns the cell to us, either creating a new one or recycling cells
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath)
         
-        // TODO: Configure cell
+        // TODO: Finish configuring cell
         
         // Return cell
         return cell
