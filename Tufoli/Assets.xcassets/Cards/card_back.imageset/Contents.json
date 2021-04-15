@@ -1,19 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "card_back@1x.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "filename" : "card_back@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "card_back@3x.png",
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "card_back.svg",
+      "idiom" : "universal"
     }
   ],
   "info" : {

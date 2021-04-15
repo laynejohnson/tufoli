@@ -80,6 +80,6 @@
     </scenes>
     <resources>
         <image name="card1" width="158" height="224"/>
-        <image name="card_back" width="52.5" height="74.5"/>
+        <image name="card_back" width="158" height="224"/>
     </resources>
 </document>
