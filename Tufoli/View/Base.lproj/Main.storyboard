@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-He-91q">
-                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
+                                <rect key="frame" x="54" y="10" width="768" height="393"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e8z-g3-Lof">
                                     <size key="itemSize" width="128" height="128"/>
@@ -36,7 +36,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-sj-7Vh">
                                                     <rect key="frame" x="0.0" y="0.0" width="158" height="224"/>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_back" translatesAutoresizingMaskIntoConstraints="NO" id="YOG-Gw-09V">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_back_press" translatesAutoresizingMaskIntoConstraints="NO" id="YOG-Gw-09V">
                                                     <rect key="frame" x="0.0" y="0.0" width="158" height="224"/>
                                                 </imageView>
                                             </subviews>
@@ -63,10 +63,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.8784313725490196" green="0.83921568627450982" blue="0.83921568627450982" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zw1-He-91q" secondAttribute="trailing" id="FKx-Xy-dNR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zw1-He-91q" secondAttribute="bottom" id="XxY-Gi-kzj"/>
-                            <constraint firstItem="Zw1-He-91q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aFK-a5-b4A"/>
-                            <constraint firstItem="Zw1-He-91q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wUO-uv-png"/>
+                            <constraint firstItem="Zw1-He-91q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="FWr-5w-ihY"/>
+                            <constraint firstItem="Zw1-He-91q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="H4Z-uj-1Jr"/>
+                            <constraint firstItem="Zw1-He-91q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="JYo-gY-87L"/>
+                            <constraint firstItem="Zw1-He-91q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-30" id="KgK-ds-zkQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -80,6 +80,6 @@
     </scenes>
     <resources>
         <image name="card1" width="158" height="224"/>
-        <image name="card_back" width="158" height="224"/>
+        <image name="card_back_press" width="158" height="224"/>
     </resources>
 </document>
