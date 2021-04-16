@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 // Set the view contoller as the object that is supplying the data to the collection + handle user events in collection view
 
@@ -17,6 +18,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     let model = CardModel()
     var cardsArray = [Card]()
+    
+    // Initial View
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +28,28 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cardsArray = model.getCards()
         
         // Set the view controller as the datasource and delegate of the collection view
-        
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        // Audio Player
+        playSound("Lucio Dalla - Washington.mp3")
+    }
+    
+    // MARK: - Audio Player
+    
+    var audioPlayer: AVAudioPlayer?
+    
+    func playSound(_ soundName: String) {
+        let path = Bundle.main.path(forResource: soundName, ofType:nil)!
+        
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+                } catch {
+                    // error handling
+            }
     }
     
     // MARK: - Collection View Delegate Methods

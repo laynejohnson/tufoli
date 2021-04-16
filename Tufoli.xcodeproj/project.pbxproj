@@ -10,6 +10,7 @@
 		E89AA98426272A4E000B0289 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AA98326272A4E000B0289 /* CardModel.swift */; };
 		E89AA98826272B20000B0289 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AA98726272B20000B0289 /* Card.swift */; };
 		E89AA98B262741F3000B0289 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */; };
+		E89AA992262A1608000B0289 /* Lucio Dalla - Washington.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E89AA991262A1608000B0289 /* Lucio Dalla - Washington.mp3 */; };
 		E8E5CEC3261B3B7A007D39D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E5CEC2261B3B7A007D39D4 /* AppDelegate.swift */; };
 		E8E5CEC5261B3B7A007D39D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E5CEC4261B3B7A007D39D4 /* SceneDelegate.swift */; };
 		E8E5CEC7261B3B7A007D39D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E5CEC6261B3B7A007D39D4 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		E89AA98326272A4E000B0289 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		E89AA98726272B20000B0289 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		E89AA991262A1608000B0289 /* Lucio Dalla - Washington.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lucio Dalla - Washington.mp3"; sourceTree = "<group>"; };
 		E8E5CEBF261B3B7A007D39D4 /* Tufoli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tufoli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8E5CEC2261B3B7A007D39D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8E5CEC4261B3B7A007D39D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +88,6 @@
 				E8E5CED0261B3B7C007D39D4 /* Info.plist */,
 				E8E5CEDB261B4A13007D39D4 /* Fonts */,
 				E8E5CEDC261B4A20007D39D4 /* Sounds */,
-				E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */,
 			);
 			path = Tufoli;
 			sourceTree = "<group>";
@@ -96,6 +97,7 @@
 			children = (
 				E89AA98326272A4E000B0289 /* CardModel.swift */,
 				E89AA98726272B20000B0289 /* Card.swift */,
+				E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +135,7 @@
 		E8E5CEDC261B4A20007D39D4 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				E89AA991262A1608000B0289 /* Lucio Dalla - Washington.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				E8E5CECF261B3B7C007D39D4 /* LaunchScreen.storyboard in Resources */,
 				E8E5CEEA261B56DA007D39D4 /* Lexend-Light.ttf in Resources */,
+				E89AA992262A1608000B0289 /* Lucio Dalla - Washington.mp3 in Resources */,
 				E8E5CECC261B3B7C007D39D4 /* Assets.xcassets in Resources */,
 				E8E5CEED261B56DA007D39D4 /* Lexend-ExtraBold.ttf in Resources */,
 				E8E5CEEC261B56DA007D39D4 /* Lexend-SemiBold.ttf in Resources */,
