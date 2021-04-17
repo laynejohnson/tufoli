@@ -14,7 +14,11 @@ import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
+    @IBOutlet weak var italianRadio: UISwitch!
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
     
     let model = CardModel()
     var cardsArray = [Card]()
@@ -30,9 +34,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Set the view controller as the datasource and delegate of the collection view
         collectionView.dataSource = self
         collectionView.delegate = self
-        
+       
         // Audio Player
         playSound("Lucio Dalla - Washington.mp3")
+     
+
     }
     
     // MARK: - Audio Player

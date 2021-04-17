@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-He-91q">
-                                <rect key="frame" x="54" y="10" width="768" height="393"/>
+                                <rect key="frame" x="54" y="85" width="768" height="318"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e8z-g3-Lof">
                                     <size key="itemSize" width="128" height="128"/>
@@ -59,18 +59,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9T1-6R-fgl">
+                                <rect key="frame" x="423.5" y="30" width="51" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="onTintColor" red="0.29411764705882354" green="0.50588235294117645" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.8784313725490196" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.8784313725490196" green="0.83921568627450982" blue="0.83921568627450982" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.8784313725490196" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Zw1-He-91q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="FWr-5w-ihY"/>
+                            <constraint firstItem="Zw1-He-91q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="FWr-5w-ihY"/>
                             <constraint firstItem="Zw1-He-91q" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="10" id="H4Z-uj-1Jr"/>
                             <constraint firstItem="Zw1-He-91q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="JYo-gY-87L"/>
                             <constraint firstItem="Zw1-He-91q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-30" id="KgK-ds-zkQ"/>
+                            <constraint firstItem="9T1-6R-fgl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SHB-kf-4o4"/>
+                            <constraint firstItem="9T1-6R-fgl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Z6L-Zz-0wz"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Zw1-He-91q" id="3eV-An-297"/>
+                        <outlet property="italianRadio" destination="9T1-6R-fgl" id="BxR-gX-4x8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
