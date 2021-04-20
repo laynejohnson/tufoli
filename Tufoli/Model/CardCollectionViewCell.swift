@@ -30,6 +30,7 @@ class CardCollectionViewCell: UICollectionViewCell {
             flipUp(speed: 0)
         } else {
             // Show back image view
+            flipDown(speed: 0)
             
         }
     }
@@ -38,11 +39,17 @@ class CardCollectionViewCell: UICollectionViewCell {
         // Flip up animation
         // Completion is code that runs after transition
         UIView.transition(from: backImageView, to: frontImageView, duration: 0.3, options: [.showHideTransitionViews, .transitionFlipFromLeft] , completion: nil)
+        
+        // Set the status of the card
+        card?.isFlipped = true
     }
     
     func flipDown(speed: TimeInterval = 0.3) {
         // Flip down animation
         UIView.transition(from: frontImageView, to: backImageView, duration: 0.3, options: [.showHideTransitionViews, .transitionFlipFromLeft] , completion: nil)
+        
+        // Set the status of the card
+        card?.isFlipped = false
         
     }
 }
