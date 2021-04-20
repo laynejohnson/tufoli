@@ -81,14 +81,28 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // dequeueReusableCell returns the cell to us, either creating a new one or recycling cells
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         
+        // Get the card from the card array
+        let card = cardsArray[indexPath.row]
+        
         // TODO: Finish configuring cell
+        cell.configureCell(card: card)
         
         // Return cell
         // Returned CardCell is of data type CardCollectionViewCell
         // Returned cell must be casted
         return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // Get a reference to the cell that was tapped
+        let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionViewCell
+    
+        // Flip the card
+        cell?.flipUp()
     }
 
-
+  
 }
 
