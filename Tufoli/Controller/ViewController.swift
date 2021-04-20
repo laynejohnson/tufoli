@@ -14,9 +14,6 @@ import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-
-    @IBOutlet weak var italianRadioSwitch: UISwitch!
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     
@@ -35,7 +32,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.delegate = self
        
         // Audio Player
-        playSound("Lucio Dalla - Washington.mp3")
+//        playSound("Lucio Dalla - Washington.mp3")
      
 
     }
