@@ -79,7 +79,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Use reuse identifier given to prototype cell ("CardCell")
         // Pass in indexPath parameter
         // dequeueReusableCell returns the cell to us, either creating a new one or recycling cells
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as CardCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         
         // TODO: Finish configuring cell
         
