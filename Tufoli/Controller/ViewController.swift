@@ -14,8 +14,8 @@ import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    
-    @IBOutlet weak var italianRadio: UISwitch!
+
+    @IBOutlet weak var italianRadioSwitch: UISwitch!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -28,7 +28,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         cardsArray = model.getCards()
         
         // Set the view controller as the datasource and delegate of the collection view
@@ -80,11 +79,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Use reuse identifier given to prototype cell ("CardCell")
         // Pass in indexPath parameter
         // dequeueReusableCell returns the cell to us, either creating a new one or recycling cells
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as CardCollectionViewCell
         
         // TODO: Finish configuring cell
         
         // Return cell
+        // Returned CardCell is of data type CardCollectionViewCell
+        // Returned cell must be casted
         return cell
     }
 
