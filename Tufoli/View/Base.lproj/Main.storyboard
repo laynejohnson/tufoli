@@ -16,30 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linguine_background" translatesAutoresizingMaskIntoConstraints="NO" id="qoG-rq-CQT">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linguine_background" translatesAutoresizingMaskIntoConstraints="NO" id="qoG-rq-CQT">
+                                <rect key="frame" x="0.0" y="-77" width="1214" height="491"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SCC-Td-7mu">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SCC-Td-7mu">
                                 <rect key="frame" x="44" y="0.0" width="808" height="393"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqC-rK-VDR" userLabel="Italian Radio View">
-                                        <rect key="frame" x="0.0" y="0.0" width="808" height="115.5"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VqC-rK-VDR" userLabel="Italian Radio View">
+                                        <rect key="frame" x="0.0" y="0.0" width="808" height="85"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italian_radio_background" translatesAutoresizingMaskIntoConstraints="NO" id="3RT-Rq-NkW">
-                                                <rect key="frame" x="0.0" y="25" width="808" height="78"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="italian_radio_background" translatesAutoresizingMaskIntoConstraints="NO" id="3RT-Rq-NkW">
+                                                <rect key="frame" x="0.0" y="25" width="770" height="78"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="3RT-Rq-NkW" secondAttribute="trailing" id="6g7-UM-JUd"/>
-                                            <constraint firstItem="3RT-Rq-NkW" firstAttribute="top" secondItem="VqC-rK-VDR" secondAttribute="top" constant="25" id="FhT-TX-YU6"/>
-                                            <constraint firstItem="3RT-Rq-NkW" firstAttribute="leading" secondItem="VqC-rK-VDR" secondAttribute="leading" id="iLs-xo-Yy7"/>
-                                            <constraint firstItem="3RT-Rq-NkW" firstAttribute="centerX" secondItem="VqC-rK-VDR" secondAttribute="centerX" id="y4A-rj-puI"/>
-                                        </constraints>
                                     </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-He-91q">
-                                        <rect key="frame" x="0.0" y="115.5" width="808" height="277.5"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-He-91q">
+                                        <rect key="frame" x="0.0" y="85" width="808" height="308"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e8z-g3-Lof">
                                             <size key="itemSize" width="158" height="224"/>
@@ -56,14 +52,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="158" height="224"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-sj-7Vh">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-sj-7Vh">
                                                             <rect key="frame" x="0.0" y="0.0" width="158" height="224"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="224" id="9IG-nk-lq7"/>
                                                                 <constraint firstAttribute="width" constant="158" id="PgZ-iK-dEk"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_back_positano" translatesAutoresizingMaskIntoConstraints="NO" id="YOG-Gw-09V">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="card_back_positano" translatesAutoresizingMaskIntoConstraints="NO" id="YOG-Gw-09V">
                                                             <rect key="frame" x="0.0" y="0.0" width="158" height="224"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="158" id="YCX-W1-545"/>
@@ -71,12 +67,6 @@
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="9JM-sj-7Vh" firstAttribute="top" secondItem="Ind-SD-Zed" secondAttribute="top" id="Z6g-xa-Q62"/>
-                                                        <constraint firstItem="9JM-sj-7Vh" firstAttribute="leading" secondItem="Ind-SD-Zed" secondAttribute="leading" id="bsn-pw-jnQ"/>
-                                                        <constraint firstItem="9JM-sj-7Vh" firstAttribute="top" secondItem="YOG-Gw-09V" secondAttribute="top" id="pIn-51-o3V"/>
-                                                        <constraint firstItem="9JM-sj-7Vh" firstAttribute="leading" secondItem="YOG-Gw-09V" secondAttribute="leading" id="sdT-aN-8xP"/>
-                                                    </constraints>
                                                 </collectionViewCellContentView>
                                                 <size key="customSize" width="158" height="224"/>
                                                 <connections>
@@ -89,23 +79,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Zw1-He-91q" firstAttribute="top" secondItem="VqC-rK-VDR" secondAttribute="bottom" id="sIW-Qy-vxo"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="qoG-rq-CQT" secondAttribute="trailing" id="JfD-9A-Utl"/>
-                            <constraint firstAttribute="bottom" secondItem="qoG-rq-CQT" secondAttribute="bottom" id="Mp9-No-q9b"/>
-                            <constraint firstItem="qoG-rq-CQT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OFA-nC-HCn"/>
-                            <constraint firstItem="SCC-Td-7mu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c7g-bU-bFY"/>
-                            <constraint firstItem="SCC-Td-7mu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hD0-q2-wR4"/>
-                            <constraint firstItem="qoG-rq-CQT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mJQ-JP-Dq1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SCC-Td-7mu" secondAttribute="bottom" id="tyc-9u-0Bo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SCC-Td-7mu" secondAttribute="trailing" id="uFk-sq-WVP"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Zw1-He-91q" id="3eV-An-297"/>
