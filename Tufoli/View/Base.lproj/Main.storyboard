@@ -84,6 +84,11 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oC-SN-8Y0" userLabel="Play/Pause Button">
                                                                         <rect key="frame" x="39" y="0.0" width="37" height="37"/>
                                                                         <state key="normal" image="play_button"/>
+                                                                        <state key="disabled" image="play_button"/>
+                                                                        <state key="selected" image="pause_button"/>
+                                                                        <connections>
+                                                                            <action selector="radioOnOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xfv-2R-4xf"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPo-f3-lcW" userLabel="Next Button">
                                                                         <rect key="frame" x="92" y="0.0" width="23" height="37"/>
@@ -194,6 +199,7 @@
                         <outlet property="radioButtonNext" destination="cPo-f3-lcW" id="Xog-ii-bUc"/>
                         <outlet property="radioButtonPlayPause" destination="4oC-SN-8Y0" id="sIk-Jw-6AS"/>
                         <outlet property="radioButtonPrevious" destination="nn2-36-btV" id="q8A-w7-Ca5"/>
+                        <outlet property="songLabel" destination="zqT-eh-3Sr" id="9HH-B1-sm7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -207,6 +213,7 @@
         <image name="italian_radio_background" width="770" height="78"/>
         <image name="linguine_background" width="1214" height="491"/>
         <image name="next_icon" width="23" height="18"/>
+        <image name="pause_button" width="37" height="37"/>
         <image name="play_button" width="37" height="37"/>
         <image name="previous_button" width="23" height="18"/>
         <image name="radio_icon" width="57" height="57"/>

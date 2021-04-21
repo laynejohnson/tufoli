@@ -16,13 +16,35 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var songLabel: UILabel!
+    
     @IBOutlet weak var radioButtonPrevious: UIButton!
     
     @IBOutlet weak var radioButtonPlayPause: UIButton!
     
     @IBOutlet weak var radioButtonNext: UIButton!
+
+    
+    @IBAction func radioOnOff(_ sender: UIButton) {
+        
+        sender.isSelected.toggle()
+        
+        let italianRadioSongs = ["Lucio Dalla - Washington.mp3", "Mango - Bella d'Estate.mp3", "Franco Battiato - Summer On A Solitary Beach.mp3" ]
+        let song = italianRadioSongs[0]
+        
+        // Remove .mp3 for display and display song
+        let modifiedSong = song.replacingOccurrences(of: ".mp3", with: "", options: [.caseInsensitive, .regularExpression])
+        songLabel.text = modifiedSong
+     
+        if sender.isSelected == true {
+            playSound(song)
+        } else if sender.isSelected == false {
+            audioPlayer?.stop()
+        }
+    }
     
     
+   
     let model = CardModel()
     var cardsArray = [Card]()
     
@@ -36,11 +58,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Set the view controller as the datasource and delegate of the collection view
         collectionView.dataSource = self
         collectionView.delegate = self
-       
-        // Audio Player
-//        playSound("Lucio Dalla - Washington.mp3")
-     
-
+    
     }
     
     // MARK: - Audio Player
