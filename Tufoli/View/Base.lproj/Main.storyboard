@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,6 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linguine_background" translatesAutoresizingMaskIntoConstraints="NO" id="B5F-sb-Beo">
+                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SCC-Td-7mu">
                                 <rect key="frame" x="44" y="0.0" width="808" height="393"/>
                                 <subviews>
@@ -30,6 +32,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italian_radio_background" translatesAutoresizingMaskIntoConstraints="NO" id="3RT-Rq-NkW">
                                                 <rect key="frame" x="19" y="24" width="770" height="78"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yyT-Ps-DKo" userLabel="Italian Radio Stack View">
                                                 <rect key="frame" x="19" y="24" width="770" height="78"/>
@@ -45,7 +48,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="4Ni-Ce-ivW" firstAttribute="centerY" secondItem="Fzr-Lf-P4y" secondAttribute="centerY" id="J8C-Sd-mut"/>
                                                             <constraint firstAttribute="height" constant="54" id="dPw-NC-ahC"/>
@@ -59,11 +62,11 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Lucio Dalla – Washington" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqT-eh-3Sr" userLabel="Song Label">
                                                                 <rect key="frame" x="0.0" y="25" width="282" height="27.5"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="17"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="zqT-eh-3Sr" firstAttribute="centerY" secondItem="yIV-q7-v69" secondAttribute="centerY" id="mHc-5e-EHa"/>
                                                         </constraints>
@@ -93,7 +96,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="236" id="0hu-Jp-Mw1"/>
                                                             <constraint firstItem="hpl-HM-ba4" firstAttribute="centerX" secondItem="xt7-yd-21x" secondAttribute="centerX" id="62m-yu-lCo"/>
@@ -102,6 +105,8 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="770" id="Dtu-IK-bgY"/>
                                                     <constraint firstItem="xt7-yd-21x" firstAttribute="centerY" secondItem="yyT-Ps-DKo" secondAttribute="centerY" id="Pro-hI-7Lq"/>
@@ -143,7 +148,7 @@
                                                                 <constraint firstAttribute="width" constant="158" id="PgZ-iK-dEk"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="card_back_positano" translatesAutoresizingMaskIntoConstraints="NO" id="YOG-Gw-09V">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="card_back_calabria" translatesAutoresizingMaskIntoConstraints="NO" id="YOG-Gw-09V">
                                                             <rect key="frame" x="0.0" y="0.0" width="158" height="224"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="158" id="YCX-W1-545"/>
@@ -174,14 +179,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="B5F-sb-Beo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1ua-R1-ol7"/>
+                            <constraint firstItem="B5F-sb-Beo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Bv-hj-mz9"/>
                             <constraint firstItem="SCC-Td-7mu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8yW-8Q-hK9"/>
                             <constraint firstItem="SCC-Td-7mu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ls1-Ir-rEy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B5F-sb-Beo" secondAttribute="bottom" id="MKu-I7-s8U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B5F-sb-Beo" secondAttribute="trailing" id="jPk-5A-YR9"/>
                             <constraint firstItem="SCC-Td-7mu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pe9-HV-9hI"/>
                             <constraint firstItem="SCC-Td-7mu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="u7s-jN-TNA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Zw1-He-91q" id="3eV-An-297"/>
+                        <outlet property="radioButtonNext" destination="cPo-f3-lcW" id="Xog-ii-bUc"/>
+                        <outlet property="radioButtonPlayPause" destination="4oC-SN-8Y0" id="sIk-Jw-6AS"/>
+                        <outlet property="radioButtonPrevious" destination="nn2-36-btV" id="q8A-w7-Ca5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -191,14 +203,12 @@
     </scenes>
     <resources>
         <image name="card1" width="158" height="224"/>
-        <image name="card_back_positano" width="162" height="230"/>
+        <image name="card_back_calabria" width="162" height="230"/>
         <image name="italian_radio_background" width="770" height="78"/>
+        <image name="linguine_background" width="1214" height="491"/>
         <image name="next_icon" width="23" height="18"/>
         <image name="play_button" width="37" height="37"/>
         <image name="previous_button" width="23" height="18"/>
         <image name="radio_icon" width="57" height="57"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

@@ -16,6 +16,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var radioButtonPrevious: UIButton!
+    
+    @IBOutlet weak var radioButtonPlayPause: UIButton!
+    
+    @IBOutlet weak var radioButtonNext: UIButton!
+    
     
     let model = CardModel()
     var cardsArray = [Card]()
