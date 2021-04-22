@@ -23,37 +23,83 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var radioButtonPlayPause: UIButton!
     
     @IBOutlet weak var radioButtonNext: UIButton!
-
+    
+    let model = CardModel()
+    
+    var cardsArray = [Card]()
+    
+    // MARK: Italian Radio
+    
+    let italianRadioSongs = ["Lucio Dalla - Washington.mp3", "Mango - Bella d'Estate.mp3", "Franco Battiato - Summer On A Solitary Beach.mp3" ]
+    
+    var song = ""
+    
+    var isPlaying = false
+    
+    func chooseSong() -> String {
+        song = italianRadioSongs.randomElement()!
+        return song
+    }
+    
+    func setSongLabel(song: String) {
+        // Modify song name string for display
+        let modifiedSong = song.replacingOccurrences(of: ".mp3", with: "", options: [.caseInsensitive, .regularExpression])
+        // Set song label
+        songLabel.text = modifiedSong
+    }
+    
+    @IBAction func playPreviousSong(_ sender: UIButton) {
+        
+        // TODO: italianRadioSongs - 1
+        // Get current song
+        // Get song - 1
+        // Play song - 1
+        let nextSong = chooseSong()
+        playSound(nextSong)
+        setSongLabel(song: nextSong)
+    }
     
     @IBAction func radioOnOff(_ sender: UIButton) {
         
         sender.isSelected.toggle()
-        
-        let italianRadioSongs = ["Lucio Dalla - Washington.mp3", "Mango - Bella d'Estate.mp3", "Franco Battiato - Summer On A Solitary Beach.mp3" ]
-        let song = italianRadioSongs[0]
-        
-        // Remove .mp3 for display and display song
-        let modifiedSong = song.replacingOccurrences(of: ".mp3", with: "", options: [.caseInsensitive, .regularExpression])
-        songLabel.text = modifiedSong
-     
+
         if sender.isSelected == true {
+            song = italianRadioSongs[0]
+            setSongLabel(song: song)
+            isPlaying = true
             playSound(song)
         } else if sender.isSelected == false {
-            audioPlayer?.stop()
+            setSongLabel(song: "Press play to vibe...")
+            isPlaying = false
+            audioPlayer?.pause()
         }
     }
     
     
-   
-    let model = CardModel()
-    var cardsArray = [Card]()
+    @IBAction func playNextSong(_ sender: UIButton) {
+        
+        // TODO: italianRadioSongs - 1
+        // Get current song
+        // Get song + 1
+        // Play song + 1
+        let nextSong = chooseSong()
+        playSound(nextSong)
+        setSongLabel(song: nextSong)
+    }
     
-    // Initial View
+   
+
+    
+    // MARK: Initial View
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         cardsArray = model.getCards()
+        
+        // Set song label
+        setSongLabel(song: "Press play to vibe...")
         
         // Set the view controller as the datasource and delegate of the collection view
         collectionView.dataSource = self
