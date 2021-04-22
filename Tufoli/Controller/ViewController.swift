@@ -54,9 +54,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Get current song
         // Get song - 1
         // Play song - 1
-        let nextSong = chooseSong()
-        playSound(nextSong)
-        setSongLabel(song: nextSong)
+        if isPlaying == true {
+            let nextSong = chooseSong()
+            playSound(nextSong)
+            setSongLabel(song: nextSong)
+        } else if isPlaying == false {
+           // add animation to radio icon/flash press play
+            
+        }
     }
     
     @IBAction func radioOnOff(_ sender: UIButton) {
@@ -82,13 +87,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Get current song
         // Get song + 1
         // Play song + 1
-        let nextSong = chooseSong()
-        playSound(nextSong)
-        setSongLabel(song: nextSong)
+        if isPlaying == true {
+            let nextSong = chooseSong()
+            playSound(nextSong)
+            setSongLabel(song: nextSong)
+        } else if isPlaying == false {
+            // add animation to radio icon/flash press play
+             
+         }
     }
-    
-   
-
     
     // MARK: Initial View
 
