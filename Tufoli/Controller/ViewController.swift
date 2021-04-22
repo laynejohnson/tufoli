@@ -3,7 +3,7 @@
 //  Tufoli
 //
 //  Created by Layne Johnson on 4/5/21.
-//
+//  Copyright © 2021. All rights reserved.
 
 import UIKit
 import AVFoundation
@@ -176,7 +176,5 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Flip the card
         cell?.flipUp()
     }
-
-  
 }
 
