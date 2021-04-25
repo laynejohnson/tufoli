@@ -52,16 +52,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // TODO: italianRadioSongs - 1
         // Get current song
-        // Get song - 1
-        // Play song - 1
-        if isPlaying == true {
-            let nextSong = chooseSong()
-            playSound(nextSong)
-            setSongLabel(song: nextSong)
-        } else if isPlaying == false {
-           // add animation to radio icon/flash press play
-            
-        }
+        let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
+        print(songIndex!)
+//        // Get song - 1
+//        // Play song - 1
+//        if isPlaying == true {
+//            let nextSong = chooseSong()
+//            playSound(nextSong)
+//            setSongLabel(song: nextSong)
+//        } else if isPlaying == false {
+//           // add animation to radio icon/flash press play
+//
+//        }
     }
     
     @IBAction func radioOnOff(_ sender: UIButton) {
@@ -69,7 +71,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         sender.isSelected.toggle()
 
         if sender.isSelected == true {
-            song = italianRadioSongs[0]
+//            song = italianRadioSongs[0]
+            song = chooseSong()
             setSongLabel(song: song)
             isPlaying = true
             playSound(song)
@@ -80,21 +83,39 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
-    
+    // Add while loop itlianRadioSongs.count
+    // of index == 3 repeat
     @IBAction func playNextSong(_ sender: UIButton) {
+        // Get index of current song
+        let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
+        print("Song index: \(songIndex!)")
+        // Get index of next song
+        let nextSongIndex = songIndex! + 1
+        print("Next song index: \(nextSongIndex)")
         
-        // TODO: italianRadioSongs - 1
-        // Get current song
-        // Get song + 1
-        // Play song + 1
-        if isPlaying == true {
-            let nextSong = chooseSong()
-            playSound(nextSong)
-            setSongLabel(song: nextSong)
-        } else if isPlaying == false {
-            // add animation to radio icon/flash press play
-             
-         }
+        
+//        if isPlaying == true {
+
+//            // Get song + 1
+
+//            // Play song + 1
+//            let nextSong = italianRadioSongs[nextSongIndex]
+//            playSound(nextSong)
+//            // Set song label
+//            setSongLabel(song: nextSong)
+//        }
+
+
+//
+//
+//        if isPlaying == true {
+//            let nextSong = chooseSong()
+//            playSound(nextSong)
+//            setSongLabel(song: nextSong)
+//        } else if isPlaying == false {
+//            // add animation to radio icon/flash press play
+//
+//         }
     }
     
     // MARK: Initial View
