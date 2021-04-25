@@ -49,32 +49,39 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @IBAction func playPreviousSong(_ sender: UIButton) {
-        
-        // TODO: italianRadioSongs - 1
-        // Get current song
-        let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
-        print(songIndex!)
-//        // Get song - 1
-//        // Play song - 1
-//        if isPlaying == true {
-//            let nextSong = chooseSong()
-//            playSound(nextSong)
-//            setSongLabel(song: nextSong)
-//        } else if isPlaying == false {
-//           // add animation to radio icon/flash press play
-//
-//        }
+        //
+        //        // Modify code for previous song
+        //        if isPlaying == true {
+        //            // Get index of current song
+        //            let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
+        //            print("Song index: \(songIndex!)")
+        //            // Get index of next song
+        //            var previousSongIndex = songIndex! - 1
+        //            print("Next song index: \(previousSongIndex)")
+        //            // Reset index at end of array
+        //            if previousSongIndex < 0 || previousSongIndex > italianRadioSongs.count {
+        //                previousSongIndex = italianRadioSongs.endIndex
+        //            }
+        //            // Play next song
+        //                let previousSong = italianRadioSongs[previousSongIndex]
+        //                playSound(previousSong)
+        //            // Set song label for next song
+        //            // TODO: Refactor; add setSongLabel label function to playSound function
+        //                setSongLabel(song: previousSong)
+        //        } else {
+        //            // add animation to radio icon/flash press play
+        //        }
     }
     
     @IBAction func radioOnOff(_ sender: UIButton) {
         
         sender.isSelected.toggle()
-
+        
         if sender.isSelected == true {
-//            song = italianRadioSongs[0]
-            song = chooseSong()
-            setSongLabel(song: song)
             isPlaying = true
+            song = italianRadioSongs[0]
+            //            song = chooseSong()
+            setSongLabel(song: song)
             playSound(song)
         } else if sender.isSelected == false {
             setSongLabel(song: "Press play to vibe...")
@@ -83,43 +90,44 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
-    // Add while loop itlianRadioSongs.count
-    // of index == 3 repeat
     @IBAction func playNextSong(_ sender: UIButton) {
-        // Get index of current song
-        let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
-        print("Song index: \(songIndex!)")
-        // Get index of next song
-        let nextSongIndex = songIndex! + 1
-        print("Next song index: \(nextSongIndex)")
-        
-        
-//        if isPlaying == true {
-
-//            // Get song + 1
-
-//            // Play song + 1
-//            let nextSong = italianRadioSongs[nextSongIndex]
-//            playSound(nextSong)
-//            // Set song label
-//            setSongLabel(song: nextSong)
-//        }
-
-
-//
-//
-//        if isPlaying == true {
-//            let nextSong = chooseSong()
-//            playSound(nextSong)
-//            setSongLabel(song: nextSong)
-//        } else if isPlaying == false {
-//            // add animation to radio icon/flash press play
-//
-//         }
+        if isPlaying == true {
+            
+            // Get index of current song
+            print("Current song: \(song)")
+            let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
+            print("Song index: \(songIndex!)")
+            
+            // Get index of next song
+            var nextSongIndex = songIndex! + 1
+            print("Next song index: \(nextSongIndex)")
+            
+            // Reset index at end of array
+            if nextSongIndex > italianRadioSongs.count - 1 {
+                nextSongIndex = 0
+                let nextSong = italianRadioSongs[nextSongIndex]
+                song = nextSong
+                playSound(song)
+                setSongLabel(song: song)
+            } else {
+                
+                // Play next song
+                let nextSong = italianRadioSongs[nextSongIndex]
+                print("Next song: \(nextSong)")
+                song = nextSong
+                print("New Current Song: \(song)")
+                playSound(song)
+                
+                // Set song label for next song
+                // TODO: Refactor; add setSongLabel label function to playSound function
+                setSongLabel(song: nextSong)
+            }
+            
+        }
     }
     
     // MARK: Initial View
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -132,7 +140,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Set the view controller as the datasource and delegate of the collection view
         collectionView.dataSource = self
         collectionView.delegate = self
-    
+        
     }
     
     // MARK: - Audio Player
@@ -147,9 +155,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer?.play()
-                } catch {
-                    // error handling
-            }
+        } catch {
+            // error handling
+        }
     }
     
     // MARK: - Collection View Delegate Methods
@@ -193,7 +201,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Get a reference to the cell that was tapped
         let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionViewCell
-    
+        
         // Flip the card
         cell?.flipUp()
     }
