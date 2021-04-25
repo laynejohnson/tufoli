@@ -14,6 +14,8 @@ import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var songLabel: UILabel!
@@ -24,11 +26,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var radioButtonNext: UIButton!
     
+    // MARK: - Variables
+    
     let model = CardModel()
     
     var cardsArray = [Card]()
     
-    // MARK: Italian Radio
+    // MARK: - Italian Radio
     
     let italianRadioSongs = ["Lucio Dalla - Washington.mp3", "Mango - Bella d'Estate.mp3", "Franco Battiato - Summer On A Solitary Beach.mp3" ]
     
@@ -89,24 +93,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func radioOnOff(_ sender: UIButton) {
         
+        // Toggle radio state
         sender.isSelected.toggle()
         
         if sender.isSelected == true {
             isPlaying = true
             song = italianRadioSongs[0]
-            //            song = chooseSong()
             setSongLabel(song: song)
             playSound(song)
         } else if sender.isSelected == false {
-            setSongLabel(song: "Press play to vibe...")
             isPlaying = false
             audioPlayer?.pause()
+            setSongLabel(song: "Press play to vibe...")
         }
     }
     
     @IBAction func playNextSong(_ sender: UIButton) {
+        
         if isPlaying == true {
-            
             // Get index of current song
             print("Current song: \(song)")
             let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
@@ -124,7 +128,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 playSound(song)
                 setSongLabel(song: song)
             } else {
-                
                 // Play next song
                 let nextSong = italianRadioSongs[nextSongIndex]
                 print("Next song: \(nextSong)")
@@ -142,7 +145,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
-    // MARK: Initial View
+    // MARK: - Initial View
     
     override func viewDidLoad() {
         super.viewDidLoad()
