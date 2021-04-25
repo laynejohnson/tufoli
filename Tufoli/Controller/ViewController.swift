@@ -49,28 +49,42 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @IBAction func playPreviousSong(_ sender: UIButton) {
-        //
-        //        // Modify code for previous song
-        //        if isPlaying == true {
-        //            // Get index of current song
-        //            let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
-        //            print("Song index: \(songIndex!)")
-        //            // Get index of next song
-        //            var previousSongIndex = songIndex! - 1
-        //            print("Next song index: \(previousSongIndex)")
-        //            // Reset index at end of array
-        //            if previousSongIndex < 0 || previousSongIndex > italianRadioSongs.count {
-        //                previousSongIndex = italianRadioSongs.endIndex
-        //            }
-        //            // Play next song
-        //                let previousSong = italianRadioSongs[previousSongIndex]
-        //                playSound(previousSong)
-        //            // Set song label for next song
-        //            // TODO: Refactor; add setSongLabel label function to playSound function
-        //                setSongLabel(song: previousSong)
-        //        } else {
-        //            // add animation to radio icon/flash press play
-        //        }
+        
+        if isPlaying == true {
+            
+            // Get index of current song
+            print("Current song: \(song)")
+            let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
+            print("Song index: \(songIndex!)")
+            
+            // Get index of previous song
+            var previousSongIndex = songIndex! - 1
+            print("previous song index: \(previousSongIndex)")
+            
+            // Reset index at end of array
+            if previousSongIndex > italianRadioSongs.count - 1 || previousSongIndex < 0 {
+                previousSongIndex = italianRadioSongs.endIndex - 1
+                let previousSong = italianRadioSongs[previousSongIndex]
+                song = previousSong
+                playSound(song)
+                setSongLabel(song: song)
+            } else {
+                
+                // Play previous song
+                let previousSong = italianRadioSongs[previousSongIndex]
+                print("previous song: \(previousSong)")
+                song = previousSong
+                print("New Current Song: \(song)")
+                playSound(song)
+                
+                // Set song label for next song
+                // TODO: Refactor; add setSongLabel label function to playSound function
+                setSongLabel(song: previousSong)
+            }
+        } else {
+            // Add animation to "Press play to vibe"
+            print("Press play to vibe")
+        }
     }
     
     @IBAction func radioOnOff(_ sender: UIButton) {
@@ -122,7 +136,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 // TODO: Refactor; add setSongLabel label function to playSound function
                 setSongLabel(song: nextSong)
             }
-            
+        } else {
+            // Add animation to "Press play to vibe"
+            print("Press play to vibe")
         }
     }
     
