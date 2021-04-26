@@ -30,9 +30,7 @@ class CardModel {
             cardTwo.imageName = "card\(randomNumber)"
             
             // Add them to the array
-            
             generatedCards += [cardOne, cardTwo]
-            
             print(randomNumber)
             
         }
@@ -41,7 +39,6 @@ class CardModel {
         generatedCards.shuffle()
         
         // Return the array
-        
         return generatedCards
         
     }

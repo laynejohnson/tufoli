@@ -29,8 +29,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // MARK: - Variables
     
     let model = CardModel()
-    
     var cardsArray = [Card]()
+    
+    // Declare porperties to track flipped cards
+    // If property is nil, no card has been selected
+    var firstFlippedCardIndex: IndexPath?
     
     // MARK: - Italian Radio
     
@@ -163,14 +166,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     // MARK: - Audio Player
+    // TODO: Refactor. Create AudioPlayer class
     
     var audioPlayer: AVAudioPlayer?
     
     func playSound(_ soundName: String) {
         let path = Bundle.main.path(forResource: soundName, ofType:nil)!
-        
+
         let url = URL(fileURLWithPath: path)
-        
+
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer?.play()
@@ -201,6 +205,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Use reuse identifier given to prototype cell ("CardCell")
         // Pass in indexPath parameter
         // dequeueReusableCell returns the cell to us, either creating a new one or recycling cells
+        // `as` keyword casts returned object as type CardCollectionViewCell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         
         // Get the card from the card array
@@ -221,8 +226,65 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Get a reference to the cell that was tapped
         let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionViewCell
         
-        // Flip the card
-        cell?.flipUp()
+        // Check the status of a card to determine flip direction
+        if cell?.card?.isFlipped == false {
+            
+            // Flip the card up
+            cell?.flipUp()
+            
+            // Check if the card is the first or second flipped card
+            
+            if firstFlippedCardIndex == nil {
+                
+                // This is the first card
+                firstFlippedCardIndex = indexPath
+                
+            }
+            else {
+                // This is the second card
+                
+                // Run comparison logic
+                checkForMatch(indexPath)
+            }
+        }
+    }
+    
+    // MARK: - Game Logic Methods
+    
+    // _ allows parameter label to be omitted from function call
+    func checkForMatch(_ secondFlippedCardIndex: IndexPath) {
+        
+        // Get the card objects from the two indices and see if they match
+        let cardOne = cardsArray[firstFlippedCardIndex!.row]
+        let cardTwo = cardsArray[secondFlippedCardIndex.row]
+        
+        // Get the two collections view cells that represent card one and two
+        let cardOneCell = collectionView.cellForItem(at: firstFlippedCardIndex!) as? CardCollectionViewCell
+        let cardTwoCell = collectionView.cellForItem(at: secondFlippedCardIndex) as? CardCollectionViewCell
+        
+        // Compare the cards
+        if cardOne.imageName == cardTwo.imageName {
+            
+            // It's a match
+            
+            // Set the status and remove them
+            cardOne.isMatched = true
+            cardTwo.isMatched = true
+            
+            cardOneCell?.remove()
+            cardTwoCell?.remove()
+            
+        } else {
+            
+            // It is not a match
+            
+            // Flip them back over
+            cardOneCell?.flipDown()
+            cardTwoCell?.flipDown()
+        }
+        
+        // Reset the firstFlippedCardIndex property
+        firstFlippedCardIndex = nil
     }
 }
 

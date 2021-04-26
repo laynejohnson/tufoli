@@ -38,18 +38,31 @@ class CardCollectionViewCell: UICollectionViewCell {
     func flipUp(speed: TimeInterval = 0.3) {
         // Flip up animation
         // Completion is code that runs after transition
-        UIView.transition(from: backImageView, to: frontImageView, duration: 0.3, options: [.showHideTransitionViews, .transitionFlipFromLeft] , completion: nil)
+        UIView.transition(from: backImageView, to: frontImageView, duration: speed, options: [.showHideTransitionViews, .transitionFlipFromLeft] , completion: nil)
         
         // Set the status of the card
         card?.isFlipped = true
     }
     
     func flipDown(speed: TimeInterval = 0.3) {
-        // Flip down animation
-        UIView.transition(from: frontImageView, to: backImageView, duration: 0.3, options: [.showHideTransitionViews, .transitionFlipFromLeft] , completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+            
+            // Flip down animation
+            UIView.transition(from: self.frontImageView, to: self.backImageView, duration: speed, options: [.showHideTransitionViews, .transitionFlipFromLeft] , completion: nil)
+        }
         
         // Set the status of the card
         card?.isFlipped = false
+    }
+    
+    func remove() {
+        // Make the image views invisible
+        backImageView.alpha = 0
         
+        UIView.animate(withDuration: 0.3, delay: 0.5, options: .curveEaseOut, animations: {
+            self.frontImageView.alpha = 0
+        }, completion: nil)
+
     }
 }
