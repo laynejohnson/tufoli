@@ -345,7 +345,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         else {
             // Check if time is left
             if milliseconds <= 0 {
-                showAlert(title: "Tempo scaduto! ⏲", message: "Torna in cucina!")
+                showAlert(title: "Tempo scaduto! ⏲", message: "")
             }
             
         }
