@@ -227,7 +227,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionViewCell
         
         // Check the status of a card to determine flip direction
-        if cell?.card?.isFlipped == false {
+        if cell?.card?.isFlipped == false && cell?.card?.isMatched == false {
             
             // Flip the card up
             cell?.flipUp()
