@@ -26,6 +26,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var radioButtonNext: UIButton!
     
+    @IBOutlet weak var timerLabel: UILabel!
+    
     // MARK: - Variables
     
     let model = CardModel()
@@ -34,6 +36,73 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // Declare porperties to track flipped cards
     // If property is nil, no card has been selected
     var firstFlippedCardIndex: IndexPath?
+    
+    // Syntax == declare timer variable of data type Timer. Timer? == optional; declared here as nil
+    var timer:Timer?
+    var milliseconds:Int = 10 * 1000
+    
+    // MARK: - Initial View
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        cardsArray = model.getCards()
+        
+        // Set song label
+        setSongLabel(song: "Press play to vibe...")
+        
+        // Set the view controller as the datasource and delegate of the collection view
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        // Initialize the timer
+        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerFired), userInfo: nil, repeats: true)
+        
+    }
+    
+    // MARK: - Timer Methods
+    
+    // Method as a selector
+    // When each milisecond passes it should call this selector method
+    @objc func timerFired() {
+        
+        // Decrement the counter
+        milliseconds -= 1
+        
+        // Update the label
+        let seconds:Double = Double(milliseconds)/1000.0
+        timerLabel.text = String(format: "Time Remaining: %.2f", arguments: [seconds])
+        
+        // Stop the timer if it reaches zero
+        if milliseconds == 0 {
+            
+            timerLabel.text = "Al dente!"
+            timerLabel.textColor = UIColor.red
+            timer?.invalidate()
+            
+            // Check if the player has cleared all the pairs
+            checkForGameEnd()
+        }
+    }
+    
+    // MARK: - Audio Player
+    // TODO: Refactor. Create AudioPlayer class
+    
+    var audioPlayer: AVAudioPlayer?
+    
+    func playSound(_ soundName: String) {
+        let path = Bundle.main.path(forResource: soundName, ofType:nil)!
+
+        let url = URL(fileURLWithPath: path)
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            // error handling
+        }
+    }
     
     // MARK: - Italian Radio
     
@@ -148,41 +217,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
-    // MARK: - Initial View
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        cardsArray = model.getCards()
-        
-        // Set song label
-        setSongLabel(song: "Press play to vibe...")
-        
-        // Set the view controller as the datasource and delegate of the collection view
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        
-    }
-    
-    // MARK: - Audio Player
-    // TODO: Refactor. Create AudioPlayer class
-    
-    var audioPlayer: AVAudioPlayer?
-    
-    func playSound(_ soundName: String) {
-        let path = Bundle.main.path(forResource: soundName, ofType:nil)!
-
-        let url = URL(fileURLWithPath: path)
-
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: url)
-            audioPlayer?.play()
-        } catch {
-            // error handling
-        }
-    }
-    
     // MARK: - Collection View Delegate Methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -274,6 +308,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             cardOneCell?.remove()
             cardTwoCell?.remove()
             
+            // Check if pair was last pair
+            checkForGameEnd()
+            
         } else {
             
             // It is not a match
@@ -285,6 +322,41 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Reset the firstFlippedCardIndex property
         firstFlippedCardIndex = nil
+    }
+    
+    func checkForGameEnd() {
+        
+        // Check for unmatched cards
+        
+        // Assume the player has won, loop through all the cards to see if all are matched
+        var hasWon = true
+        
+        for card in cardsArray {
+            if card.isMatched == false {
+                hasWon = false
+                break
+            }
+        }
+        
+        if hasWon == true {
+            // Show alert
+            showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa")
+        }
+        else {
+            // Check if time is left
+            if milliseconds <= 0 {
+                showAlert(title: "Tempo scaduto! ⏲", message: "Torna in cucina!")
+            }
+            
+        }
+        
+    }
+    
+    func showAlert(title:String, message:String) {
+    
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        present(alert, animated: true, completion: nil)
     }
 }
 
