@@ -32,7 +32,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     let model = CardModel()
     var cardsArray = [Card]()
-    
+
     // Declare porperties to track flipped cards
     // If property is nil, no card has been selected
     var firstFlippedCardIndex: IndexPath?
@@ -90,8 +90,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //    }
     
      // MARK: - Audio Player
-     //TODO: Refactor. Create AudioPlayer class
-    
+
     var audioPlayer: AVAudioPlayer?
 
     func playSound(_ soundName: String) {

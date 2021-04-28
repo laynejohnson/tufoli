@@ -12,7 +12,6 @@
 		E89AA98B262741F3000B0289 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */; };
 		E89AA992262A1608000B0289 /* Lucio Dalla - Washington.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E89AA991262A1608000B0289 /* Lucio Dalla - Washington.mp3 */; };
 		E8DB466626304A1A000E368B /* MuseoModerno-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8DB466526304A1A000E368B /* MuseoModerno-VariableFont_wght.ttf */; };
-		E8DB4669263053C4000E368B /* ItalianRadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DB4668263053C4000E368B /* ItalianRadioModel.swift */; };
 		E8DB466C26305B8A000E368B /* Mango - Bella d'Estate.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8DB466B26305B8A000E368B /* Mango - Bella d'Estate.mp3 */; };
 		E8DB466F26305B8F000E368B /* Franco Battiato - Summer On A Solitary Beach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8DB466E26305B8F000E368B /* Franco Battiato - Summer On A Solitary Beach.mp3 */; };
 		E8E5CEC3261B3B7A007D39D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E5CEC2261B3B7A007D39D4 /* AppDelegate.swift */; };
@@ -28,7 +27,6 @@
 		E8E5CEEC261B56DA007D39D4 /* Lexend-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CEE5261B56DA007D39D4 /* Lexend-SemiBold.ttf */; };
 		E8E5CEED261B56DA007D39D4 /* Lexend-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CEE6261B56DA007D39D4 /* Lexend-ExtraBold.ttf */; };
 		E8E5CEEE261B56DA007D39D4 /* Lexend-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8E5CEE7261B56DA007D39D4 /* Lexend-Medium.ttf */; };
-		E8F815B32636FE50004E42D7 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F815B22636FE50004E42D7 /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +35,6 @@
 		E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		E89AA991262A1608000B0289 /* Lucio Dalla - Washington.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lucio Dalla - Washington.mp3"; sourceTree = "<group>"; };
 		E8DB466526304A1A000E368B /* MuseoModerno-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		E8DB4668263053C4000E368B /* ItalianRadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalianRadioModel.swift; sourceTree = "<group>"; };
 		E8DB466B26305B8A000E368B /* Mango - Bella d'Estate.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mango - Bella d'Estate.mp3"; sourceTree = "<group>"; };
 		E8DB466E26305B8F000E368B /* Franco Battiato - Summer On A Solitary Beach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Franco Battiato - Summer On A Solitary Beach.mp3"; sourceTree = "<group>"; };
 		E8E5CEBF261B3B7A007D39D4 /* Tufoli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tufoli.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,7 +52,6 @@
 		E8E5CEE5261B56DA007D39D4 /* Lexend-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-SemiBold.ttf"; sourceTree = "<group>"; };
 		E8E5CEE6261B56DA007D39D4 /* Lexend-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-ExtraBold.ttf"; sourceTree = "<group>"; };
 		E8E5CEE7261B56DA007D39D4 /* Lexend-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lexend-Medium.ttf"; sourceTree = "<group>"; };
-		E8F815B22636FE50004E42D7 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +126,6 @@
 				E89AA98326272A4E000B0289 /* CardModel.swift */,
 				E89AA98726272B20000B0289 /* Card.swift */,
 				E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */,
-				E8DB4668263053C4000E368B /* ItalianRadioModel.swift */,
-				E8F815B22636FE50004E42D7 /* AudioPlayer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,9 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8E5CEC7261B3B7A007D39D4 /* ViewController.swift in Sources */,
-				E8DB4669263053C4000E368B /* ItalianRadioModel.swift in Sources */,
 				E89AA98426272A4E000B0289 /* CardModel.swift in Sources */,
-				E8F815B32636FE50004E42D7 /* AudioPlayer.swift in Sources */,
 				E89AA98826272B20000B0289 /* Card.swift in Sources */,
 				E8E5CEC3261B3B7A007D39D4 /* AppDelegate.swift in Sources */,
 				E89AA98B262741F3000B0289 /* CardCollectionViewCell.swift in Sources */,
