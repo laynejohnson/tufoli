@@ -26,7 +26,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var radioButtonNext: UIButton!
     
-    @IBOutlet weak var timerLabel: UILabel!
+//    @IBOutlet weak var timerLabel: UILabel!
     
     // MARK: - Variables
     
@@ -56,41 +56,41 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        // Initialize the timer
-        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerFired), userInfo: nil, repeats: true)
+//        // Initialize the timer
+//        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerFired), userInfo: nil, repeats: true)
         
     }
     
-    // MARK: - Timer Methods
+//    // MARK: - Timer Methods
+//
+//    // Method as a selector
+//    // When each milisecond passes it should call this selector method
+//    @objc func timerFired() {
+//
+//        // Decrement the counter
+//        milliseconds -= 1
+//
+//        // Update the label
+//        let seconds:Double = Double(milliseconds)/1000.0
+//        timerLabel.text = String(format: "Time Remaining: %.2f", arguments: [seconds])
+//
+//        // Stop the timer if it reaches zero
+//        if milliseconds == 0 {
+//
+//            timerLabel.text = "Al dente!"
+//            timerLabel.textColor = UIColor.red
+//            timer?.invalidate()
+//
+//            // Check if the player has cleared all the pairs
+//            checkForGameEnd()
+//        }
+//    }
     
-    // Method as a selector
-    // When each milisecond passes it should call this selector method
-    @objc func timerFired() {
-        
-        // Decrement the counter
-        milliseconds -= 1
-        
-        // Update the label
-        let seconds:Double = Double(milliseconds)/1000.0
-        timerLabel.text = String(format: "Time Remaining: %.2f", arguments: [seconds])
-        
-        // Stop the timer if it reaches zero
-        if milliseconds == 0 {
-            
-            timerLabel.text = "Al dente!"
-            timerLabel.textColor = UIColor.red
-            timer?.invalidate()
-            
-            // Check if the player has cleared all the pairs
-            checkForGameEnd()
-        }
-    }
-    
-    // MARK: - Audio Player
-    // TODO: Refactor. Create AudioPlayer class
+     // MARK: - Audio Player
+     //TODO: Refactor. Create AudioPlayer class
     
     var audioPlayer: AVAudioPlayer?
-    
+
     func playSound(_ soundName: String) {
         let path = Bundle.main.path(forResource: soundName, ofType:nil)!
 
@@ -343,20 +343,34 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa")
         }
         else {
-            // Check if time is left
             if milliseconds <= 0 {
                 showAlert(title: "Tempo scaduto! ⏲", message: "")
             }
-            
         }
         
     }
     
     func showAlert(title:String, message:String) {
-    
+        
+        // Create the alert
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        present(alert, animated: true, completion: nil)
+        // Add a button for user to reset game or dismiss alert (if win dismiss/if lose play again)
+        // TODO: Add handler code to reset game
+        let playAgainAction = UIAlertAction(title: "Play Again", style: .default, handler: nil)
+     
+        alert.addAction(playAgainAction)
+        
+        // Show the alert
+        present(alert, animated: true, completion: {
+            self.playAgain()
+        })
+    }
+    
+    func playAgain() {
+        for card in cardsArray {
+            card.isMatched = false
+        }
     }
 }
 
