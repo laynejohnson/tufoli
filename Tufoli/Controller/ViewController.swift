@@ -63,6 +63,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //        RunLoop.main.add(timer!, forMode: .common)
         
     }
+    // End viewDidLoad
     
 //    // MARK: - Timer Methods
 //
@@ -94,15 +95,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var audioPlayer: AVAudioPlayer?
 
     func playSound(_ soundName: String) {
+        
         let path = Bundle.main.path(forResource: soundName, ofType:nil)!
-
+        
         let url = URL(fileURLWithPath: path)
 
         do {
+            // Create the audio player
             audioPlayer = try AVAudioPlayer(contentsOf: url)
+            // Play the sound effect
             audioPlayer?.play()
         } catch {
-            // error handling
+            print("Could not summon audio player")
         }
     }
     
