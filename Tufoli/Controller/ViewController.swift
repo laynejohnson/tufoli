@@ -368,15 +368,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         alert.addAction(playAgainAction)
         
         // Show the alert
-        present(alert, animated: true, completion: {
-            self.playAgain()
-        })
+        present(alert, animated: true, completion: nil)
     }
-    
-    func playAgain() {
-        for card in cardsArray {
-            card.isMatched = false
-        }
-    }
+
 }
 
