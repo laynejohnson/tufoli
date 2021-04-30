@@ -25,9 +25,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var radioButtonPlayPause: UIButton!
     
     @IBOutlet weak var radioButtonNext: UIButton!
-    
-//    @IBOutlet weak var timerLabel: UILabel!
-    
+
     // MARK: - Variables
     
     let model = CardModel()
@@ -36,10 +34,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // Declare porperties to track flipped cards
     // If property is nil, no card has been selected
     var firstFlippedCardIndex: IndexPath?
-    
-    // Syntax == declare timer variable of data type Timer. Timer? == optional; declared here as nil
-    var timer:Timer?
-    var milliseconds:Int = 10 * 1000
     
     // MARK: - Initial View
     
@@ -56,39 +50,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.dataSource = self
         collectionView.delegate = self
         
-//        // Initialize the timer
-//        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerFired), userInfo: nil, repeats: true)
-//
-//        // Add timer to dedicated loop
-//        RunLoop.main.add(timer!, forMode: .common)
-        
     }
-    // End viewDidLoad
-    
-//    // MARK: - Timer Methods
-//
-//    // Method as a selector
-//    // When each milisecond passes it should call this selector method
-//    @objc func timerFired() {
-//
-//        // Decrement the counter
-//        milliseconds -= 1
-//
-//        // Update the label
-//        let seconds:Double = Double(milliseconds)/1000.0
-//        timerLabel.text = String(format: "Time Remaining: %.2f", arguments: [seconds])
-//
-//        // Stop the timer if it reaches zero
-//        if milliseconds == 0 {
-//
-//            timerLabel.text = "Al dente!"
-//            timerLabel.textColor = UIColor.red
-//            timer?.invalidate()
-//
-//            // Check if the player has cleared all the pairs
-//            checkForGameEnd()
-//        }
-//    }
+     // End viewDidLoad()
     
      // MARK: - Audio Player
 
@@ -145,6 +108,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             // Reset index at end of array
             if previousSongIndex > italianRadioSongs.count - 1 || previousSongIndex < 0 {
+                
                 previousSongIndex = italianRadioSongs.endIndex - 1
                 let previousSong = italianRadioSongs[previousSongIndex]
                 song = previousSong
@@ -164,6 +128,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 setSongLabel(song: previousSong)
             }
         } else {
+            
             // Add animation to "Press play to vibe"
             print("Press play to vibe")
         }
@@ -331,42 +296,37 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func checkForGameEnd() {
-        
+
         // Check for unmatched cards
-        
+
         // Assume the player has won, loop through all the cards to see if all are matched
         var hasWon = true
-        
+
         for card in cardsArray {
             if card.isMatched == false {
                 hasWon = false
                 break
             }
         }
-        
+
         if hasWon == true {
             // Show alert
             showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa")
         }
-        else {
-            if milliseconds <= 0 {
-                showAlert(title: "Tempo scaduto! ⏲", message: "")
-            }
-        }
-        
+
     }
     
     func showAlert(title:String, message:String) {
-        
+
         // Create the alert
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
+
         // Add a button for user to reset game or dismiss alert (if win dismiss/if lose play again)
         // TODO: Add handler code to reset game
         let playAgainAction = UIAlertAction(title: "Play Again", style: .default, handler: nil)
-     
+
         alert.addAction(playAgainAction)
-        
+
         // Show the alert
         present(alert, animated: true, completion: nil)
     }
