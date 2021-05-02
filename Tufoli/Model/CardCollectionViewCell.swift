@@ -25,11 +25,12 @@ class CardCollectionViewCell: UICollectionViewCell {
         frontImageView.image = UIImage(named: card.imageName)
         
         // Reset the state of the cell by checking the flip state of the card
-        
         if card.isFlipped == true {
+            
             // Show front image view
             flipUp(speed: 0)
         } else {
+            
             // Show back image view
             flipDown(speed: 0, delay: 0)
         }

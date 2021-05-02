@@ -33,7 +33,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     // Declare porperties to track flipped cards
     // If property is nil, no card has been selected
-    var firstFlippedCardIndex: IndexPath?
+    var firstFlippedCardIndex:IndexPath?
     
     // MARK: - Initial View
     
@@ -198,6 +198,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cardsArray.count
     }
     
+    // This method is called when the collection view wants to use a cell/create a cell for a particular index
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // Index path parameter gives cell coordinates (section, row) to reference cell; target cell.
@@ -207,23 +208,34 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Method returns an entire UICollectionViewCell.
         
         // Get a cell
+        
         // Use reuse identifier given to prototype cell ("CardCell")
+        
         // Pass in indexPath parameter
+        
         // dequeueReusableCell returns the cell to us, either creating a new one or recycling cells
+        
         // `as` keyword casts returned object as type CardCollectionViewCell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
-        
-        // Get the card from the card array
-        let card = cardsArray[indexPath.row]
-        
-        // TODO: Finish configuring cell
-        cell.configureCell(card: card)
         
         // Return cell
         // Returned CardCell is of data type CardCollectionViewCell
         // Returned cell must be casted
         return cell
+    }
+    
+    // This method is called right before a cell gets displayed
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
+        // Configure the state of the cell based on card properties
+        
+        let cardCell = cell as? CardCollectionViewCell
+        
+        // Get the card from the card array
+        let card = cardsArray[indexPath.row]
+        
+        // TODO: Finish configuring cell
+        cardCell?.configureCell(card: card)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
