@@ -17,21 +17,14 @@ class CardCollectionViewCell: UICollectionViewCell {
     var card:Card?
     
     func configureCell(card: Card) {
-        
-        // Keep track of the card that this cell represents
+    
         self.card = card
         
-        // Set the front image view to the image that represents the card
         frontImageView.image = UIImage(named: card.imageName)
         
-        // Reset the state of the cell by checking the flip state of the card
         if card.isFlipped == true {
-            
-            // Show front image view
             flipUp(speed: 0)
         } else {
-            
-            // Show back image view
             flipDown(speed: 0, delay: 0)
         }
         
@@ -46,11 +39,9 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     func flipUp(speed: TimeInterval = 0.3) {
-        // Flip up animation
-        // Completion is code that runs after transition
+        
         UIView.transition(from: backImageView, to: frontImageView, duration: speed, options: [.showHideTransitionViews, .transitionFlipFromLeft] , completion: nil)
         
-        // Set the status of the card
         card?.isFlipped = true
     }
     
@@ -62,7 +53,6 @@ class CardCollectionViewCell: UICollectionViewCell {
             UIView.transition(from: self.frontImageView, to: self.backImageView, duration: speed, options: [.showHideTransitionViews, .transitionFlipFromLeft] , completion: nil)
         }
         
-        // Set the status of the card
         card?.isFlipped = false
     }
     
