@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC7D00549D4C7A86CA4831E /* Pods_Tufoli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A5688079FBA38C1F717717 /* Pods_Tufoli.framework */; };
 		E83A0B772639CA3C00EACDCF /* twinkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B742639CA3C00EACDCF /* twinkle.mp3 */; };
 		E83A0B782639CA3C00EACDCF /* sparkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B752639CA3C00EACDCF /* sparkle.mp3 */; };
 		E83A0B792639CA3C00EACDCF /* tonk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B762639CA3C00EACDCF /* tonk.mp3 */; };
@@ -33,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46F980CED90A4C318B9E5ABC /* Pods-Tufoli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tufoli.debug.xcconfig"; path = "Target Support Files/Pods-Tufoli/Pods-Tufoli.debug.xcconfig"; sourceTree = "<group>"; };
+		65A5688079FBA38C1F717717 /* Pods_Tufoli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tufoli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87060F27C81D7CA27B0E7D2A /* Pods-Tufoli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tufoli.release.xcconfig"; path = "Target Support Files/Pods-Tufoli/Pods-Tufoli.release.xcconfig"; sourceTree = "<group>"; };
 		E83A0B742639CA3C00EACDCF /* twinkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = twinkle.mp3; sourceTree = "<group>"; };
 		E83A0B752639CA3C00EACDCF /* sparkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sparkle.mp3; sourceTree = "<group>"; };
 		E83A0B762639CA3C00EACDCF /* tonk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tonk.mp3; sourceTree = "<group>"; };
@@ -65,12 +69,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC7D00549D4C7A86CA4831E /* Pods_Tufoli.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D436A7590AD2CA49780DC6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46F980CED90A4C318B9E5ABC /* Pods-Tufoli.debug.xcconfig */,
+				87060F27C81D7CA27B0E7D2A /* Pods-Tufoli.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4E769101FF267714E2B21461 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65A5688079FBA38C1F717717 /* Pods_Tufoli.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E83A0B6A2639C99C00EACDCF /* Italian Radio */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +141,8 @@
 			children = (
 				E8E5CEC1261B3B7A007D39D4 /* Tufoli */,
 				E8E5CEC0261B3B7A007D39D4 /* Products */,
+				0D436A7590AD2CA49780DC6C /* Pods */,
+				4E769101FF267714E2B21461 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,9 +222,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8E5CED3261B3B7C007D39D4 /* Build configuration list for PBXNativeTarget "Tufoli" */;
 			buildPhases = (
+				BE163C990B3F485F634B5135 /* [CP] Check Pods Manifest.lock */,
 				E8E5CEBB261B3B7A007D39D4 /* Sources */,
 				E8E5CEBC261B3B7A007D39D4 /* Frameworks */,
 				E8E5CEBD261B3B7A007D39D4 /* Resources */,
+				B7E041A23511DD9B26F91C7A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +295,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B7E041A23511DD9B26F91C7A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tufoli/Pods-Tufoli-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tufoli/Pods-Tufoli-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tufoli/Pods-Tufoli-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE163C990B3F485F634B5135 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tufoli-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8E5CEBB261B3B7A007D39D4 /* Sources */ = {
@@ -423,6 +492,7 @@
 		};
 		E8E5CED4261B3B7C007D39D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46F980CED90A4C318B9E5ABC /* Pods-Tufoli.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -443,6 +513,7 @@
 		};
 		E8E5CED5261B3B7C007D39D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87060F27C81D7CA27B0E7D2A /* Pods-Tufoli.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

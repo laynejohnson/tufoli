@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import AutoScrollLabel
 
 // Set the view contoller as the object that is supplying the data to the collection + handle user events in collection view
 
@@ -34,6 +35,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // Declare porperties to track flipped cards
     // If property is nil, no card has been selected
     var firstFlippedCardIndex:IndexPath?
+    
+    autoScrollLabel.text = @""
     
     // MARK: - Initial View
     
