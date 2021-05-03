@@ -53,6 +53,143 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
      // End viewDidLoad()
     
+    // MARK: - Collection View Delegate Methods
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        // Stub methods. Number of items to display in a section; method returns integer.
+        
+        // Return number of cards
+        return cardsArray.count
+    }
+    
+    // This method is called when the collection view wants to use a cell/create a cell for a particular index
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
+        
+        // Return cell
+        return cell
+    }
+    
+    // This method is called right before a cell gets displayed
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        // Configure the state of the cell based on card properties
+        let cardCell = cell as? CardCollectionViewCell
+        
+        // Get the card from the card array
+        let card = cardsArray[indexPath.row]
+        
+        // TODO: Finish configuring cell
+        cardCell?.configureCell(card: card)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // Get a reference to the cell that was tapped
+        let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionViewCell
+        
+        // Check the status of a card to determine flip direction
+        if cell?.card?.isFlipped == false && cell?.card?.isMatched == false {
+            
+            // Flip the card up
+            cell?.flipUp()
+            
+            // Check if the card is the first or second flipped card
+            if firstFlippedCardIndex == nil {
+                
+                // This is the first card
+                firstFlippedCardIndex = indexPath
+                
+            }
+            else {
+                // This is the second card
+                // Run comparison logic
+                checkForMatch(indexPath)
+            }
+        }
+    }
+    
+    // MARK: - Game Logic Methods
+    
+    // _ allows parameter label to be omitted from function call
+    func checkForMatch(_ secondFlippedCardIndex: IndexPath) {
+        
+        // Get the card objects from the two indices and see if they match
+        let cardOne = cardsArray[firstFlippedCardIndex!.row]
+        let cardTwo = cardsArray[secondFlippedCardIndex.row]
+        
+        // Get the two collections view cells that represent card one and two
+        let cardOneCell = collectionView.cellForItem(at: firstFlippedCardIndex!) as? CardCollectionViewCell
+        let cardTwoCell = collectionView.cellForItem(at: secondFlippedCardIndex) as? CardCollectionViewCell
+        
+        // Compare the cards
+        if cardOne.imageName == cardTwo.imageName {
+            
+            // It's a match
+            
+            // Set the status and remove them
+            cardOne.isMatched = true
+            cardTwo.isMatched = true
+            
+            cardOneCell?.remove()
+            cardTwoCell?.remove()
+            
+            // Check if pair was last pair
+            checkForGameEnd()
+            
+        } else {
+            
+            // It is not a match
+            
+            // Flip them back over
+            cardOneCell?.flipDown()
+            cardTwoCell?.flipDown()
+        }
+        
+        // Reset the firstFlippedCardIndex property
+        firstFlippedCardIndex = nil
+    }
+    
+    func checkForGameEnd() {
+
+        // Check for unmatched cards
+
+        // Assume the player has won, loop through all the cards to see if all are matched
+        var hasWon = true
+
+        for card in cardsArray {
+            if card.isMatched == false {
+                hasWon = false
+                break
+            }
+        }
+
+        if hasWon == true {
+            // Show alert
+            showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa")
+        }
+    }
+    
+    func showAlert(title:String, message:String) {
+
+        // Create the alert
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+        // TODO: Add handler code to reset game
+        let playAgainAction = UIAlertAction(title: "Play Again", style: .default, handler: nil)
+
+        alert.addAction(playAgainAction)
+
+        // Show the alert
+        present(alert, animated: true, completion: nil)
+    }
+
+}
+
+
+    
      // MARK: - Audio Player
 
     var audioPlayer: AVAudioPlayer?
@@ -187,161 +324,3 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             print("Press play to vibe")
         }
     }
-    
-    // MARK: - Collection View Delegate Methods
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        // Stub methods. Number of items to display in a section; method returns integer.
-        
-        // Return number of cards
-        return cardsArray.count
-    }
-    
-    // This method is called when the collection view wants to use a cell/create a cell for a particular index
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        // Index path parameter gives cell coordinates (section, row) to reference cell; target cell.
-        
-        // Method asks the datasource which cell to display for each cell (0-n).
-        
-        // Method returns an entire UICollectionViewCell.
-        
-        // Get a cell
-        
-        // Use reuse identifier given to prototype cell ("CardCell")
-        
-        // Pass in indexPath parameter
-        
-        // dequeueReusableCell returns the cell to us, either creating a new one or recycling cells
-        
-        // `as` keyword casts returned object as type CardCollectionViewCell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
-        
-        // Return cell
-        // Returned CardCell is of data type CardCollectionViewCell
-        // Returned cell must be casted
-        return cell
-    }
-    
-    // This method is called right before a cell gets displayed
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-        // Configure the state of the cell based on card properties
-        
-        let cardCell = cell as? CardCollectionViewCell
-        
-        // Get the card from the card array
-        let card = cardsArray[indexPath.row]
-        
-        // TODO: Finish configuring cell
-        cardCell?.configureCell(card: card)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        // Get a reference to the cell that was tapped
-        let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionViewCell
-        
-        // Check the status of a card to determine flip direction
-        if cell?.card?.isFlipped == false && cell?.card?.isMatched == false {
-            
-            // Flip the card up
-            cell?.flipUp()
-            
-            // Check if the card is the first or second flipped card
-            
-            if firstFlippedCardIndex == nil {
-                
-                // This is the first card
-                firstFlippedCardIndex = indexPath
-                
-            }
-            else {
-                // This is the second card
-                
-                // Run comparison logic
-                checkForMatch(indexPath)
-            }
-        }
-    }
-    
-    // MARK: - Game Logic Methods
-    
-    // _ allows parameter label to be omitted from function call
-    func checkForMatch(_ secondFlippedCardIndex: IndexPath) {
-        
-        // Get the card objects from the two indices and see if they match
-        let cardOne = cardsArray[firstFlippedCardIndex!.row]
-        let cardTwo = cardsArray[secondFlippedCardIndex.row]
-        
-        // Get the two collections view cells that represent card one and two
-        let cardOneCell = collectionView.cellForItem(at: firstFlippedCardIndex!) as? CardCollectionViewCell
-        let cardTwoCell = collectionView.cellForItem(at: secondFlippedCardIndex) as? CardCollectionViewCell
-        
-        // Compare the cards
-        if cardOne.imageName == cardTwo.imageName {
-            
-            // It's a match
-            
-            // Set the status and remove them
-            cardOne.isMatched = true
-            cardTwo.isMatched = true
-            
-            cardOneCell?.remove()
-            cardTwoCell?.remove()
-            
-            // Check if pair was last pair
-            checkForGameEnd()
-            
-        } else {
-            
-            // It is not a match
-            
-            // Flip them back over
-            cardOneCell?.flipDown()
-            cardTwoCell?.flipDown()
-        }
-        
-        // Reset the firstFlippedCardIndex property
-        firstFlippedCardIndex = nil
-    }
-    
-    func checkForGameEnd() {
-
-        // Check for unmatched cards
-
-        // Assume the player has won, loop through all the cards to see if all are matched
-        var hasWon = true
-
-        for card in cardsArray {
-            if card.isMatched == false {
-                hasWon = false
-                break
-            }
-        }
-
-        if hasWon == true {
-            // Show alert
-            showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa")
-        }
-
-    }
-    
-    func showAlert(title:String, message:String) {
-
-        // Create the alert
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-        // Add a button for user to reset game or dismiss alert (if win dismiss/if lose play again)
-        // TODO: Add handler code to reset game
-        let playAgainAction = UIAlertAction(title: "Play Again", style: .default, handler: nil)
-
-        alert.addAction(playAgainAction)
-
-        // Show the alert
-        present(alert, animated: true, completion: nil)
-    }
-
-}
-

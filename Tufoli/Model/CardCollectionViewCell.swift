@@ -20,11 +20,13 @@ class CardCollectionViewCell: UICollectionViewCell {
     
         self.card = card
         
+        // Set front image of card
         frontImageView.image = UIImage(named: card.imageName)
         
         if card.isFlipped == true {
             flipUp(speed: 0)
-        } else {
+        }
+        else {
             flipDown(speed: 0, delay: 0)
         }
         
@@ -32,7 +34,8 @@ class CardCollectionViewCell: UICollectionViewCell {
             backImageView.alpha = 0
             frontImageView.alpha = 0
             return
-        } else {
+        }
+        else {
             backImageView.alpha = 1
             frontImageView.alpha = 1
         }
@@ -40,8 +43,10 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     func flipUp(speed: TimeInterval = 0.3) {
         
+        // Flip up animation
         UIView.transition(from: backImageView, to: frontImageView, duration: speed, options: [.showHideTransitionViews, .transitionFlipFromLeft] , completion: nil)
         
+        // Set card state
         card?.isFlipped = true
     }
     
@@ -53,10 +58,12 @@ class CardCollectionViewCell: UICollectionViewCell {
             UIView.transition(from: self.frontImageView, to: self.backImageView, duration: speed, options: [.showHideTransitionViews, .transitionFlipFromLeft] , completion: nil)
         }
         
+        // Set card state
         card?.isFlipped = false
     }
     
     func remove() {
+        
         // Make the image views invisible
         backImageView.alpha = 0
         
