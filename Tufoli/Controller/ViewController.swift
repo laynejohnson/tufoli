@@ -45,6 +45,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Set song label
         setSongLabel(song: "Press play to vibe...")
+//        setSongLabel(song: "Premi avvia to vibe...")
+        
         
         // Set the view controller as the datasource and delegate of the collection view
         collectionView.dataSource = self
