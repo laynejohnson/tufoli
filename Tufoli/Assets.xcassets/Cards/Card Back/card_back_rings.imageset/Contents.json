@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "card_back_rings.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
