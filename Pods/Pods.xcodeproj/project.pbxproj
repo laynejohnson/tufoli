@@ -7,19 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BBF4D7328316C253CF3EAE49CEC95C1 /* Pods-Tufoli-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EBBA36F2740C19A731FCFF88024F6DF6 /* Pods-Tufoli-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3205A3745A590CC597277000B9E02223 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
-		669F0D055CF438F3FD7D3F6CFAE14D76 /* Pods-Tufoli-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0CA20939CA623D7F0D5084A97BBAE4 /* Pods-Tufoli-dummy.m */; };
-		ADE8E38AE2FC314562F857E3D97467C4 /* MarqueeLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 844DF49C3CAE0CCE0323406E8F1B01F8 /* MarqueeLabel-dummy.m */; };
-		BD503BE4798FC30D23AC747146D39FE2 /* MarqueeLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAFCB43B643869D69EAE42616A6E549 /* MarqueeLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8BB2EAEB3F03D521DC374327ADD7FE7 /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0FE1F280EBE6CD17CB11D260C4855F /* MarqueeLabel.swift */; };
-		CA6B7B11EAE51C6E3453876018130527 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
-		CADD2A1613A4CBD5023DD8ECD06DFBCC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */; };
-		E771CDF7837319A49468CC35D18D8434 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */; };
+		196A9D2321E8F8659C66881FE74FFBA2 /* Pods-Tufoli-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A07EB8A852DBC64E21CDEBF3D38ED2F0 /* Pods-Tufoli-dummy.m */; };
+		7F9399D1219F93649FF2B01E2DFFFB44 /* Pods-Tufoli-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0C01B824492EC935FE6B292653BBD65 /* Pods-Tufoli-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9D8C90542A8D3D93A786E37F4F763D61 /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF74611856745EC6173E3DC3564222 /* MarqueeLabel.swift */; };
+		BA0FA7AEED9A08D0637E014E27929332 /* MarqueeLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82058E7407200DF1882C6FA9E445864E /* MarqueeLabel-dummy.m */; };
+		BB10447BD49BA68DFE44BD1D2210369F /* MarqueeLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B998ECD3ADFB0B918FFF5A1E432D11B /* MarqueeLabel-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BBDB177F71339E79026944210A346D7A /* PBXContainerItemProxy */ = {
+		42D43FF2651625315730ABF097360A85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -29,116 +25,88 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		147D1E396BFD010C500D8F2D1A2CA557 /* MarqueeLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.release.xcconfig; sourceTree = "<group>"; };
-		46E50A1A1E7598D671663C90E2F9FF00 /* MarqueeLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.debug.xcconfig; sourceTree = "<group>"; };
-		4A0FE1F280EBE6CD17CB11D260C4855F /* MarqueeLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarqueeLabel.swift; path = Sources/MarqueeLabel.swift; sourceTree = "<group>"; };
-		4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		4F0CA20939CA623D7F0D5084A97BBAE4 /* Pods-Tufoli-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tufoli-dummy.m"; sourceTree = "<group>"; };
-		506C1805F0EAF8D2FDE3D524C708E880 /* MarqueeLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MarqueeLabel.modulemap; sourceTree = "<group>"; };
-		517A0F5C4B485629FE9A6BD39789E37F /* Pods-Tufoli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tufoli.debug.xcconfig"; sourceTree = "<group>"; };
-		5FAFCB43B643869D69EAE42616A6E549 /* MarqueeLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-umbrella.h"; sourceTree = "<group>"; };
-		60A5B9AA140C309AA089C603F55296AA /* Pods-Tufoli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tufoli.release.xcconfig"; sourceTree = "<group>"; };
-		6C83CBE31E4DACCB9D074D49A54F9EC2 /* Pods-Tufoli-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tufoli-frameworks.sh"; sourceTree = "<group>"; };
-		753CA77CD6AAFFFC0FC392B288DE6EA2 /* Pods-Tufoli-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tufoli-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7CA86ABF5C2C99DA436C2E71CEA0D366 /* MarqueeLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MarqueeLabel-Info.plist"; sourceTree = "<group>"; };
-		844DF49C3CAE0CCE0323406E8F1B01F8 /* MarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarqueeLabel-dummy.m"; sourceTree = "<group>"; };
-		8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		9761B00DA2840A56DC6AE3BBDBDD812C /* Pods-Tufoli-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tufoli-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		B14BB4BBE37AB16B3AAB6DCA502775E5 /* Pods-Tufoli.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tufoli.modulemap"; sourceTree = "<group>"; };
-		B344C801AA85D06A60BF46508259E9A0 /* Pods-Tufoli-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tufoli-acknowledgements.plist"; sourceTree = "<group>"; };
-		CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarqueeLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D28151C7B9B53AC181A8CCA608A898BF /* MarqueeLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-prefix.pch"; sourceTree = "<group>"; };
-		EBBA36F2740C19A731FCFF88024F6DF6 /* Pods-Tufoli-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tufoli-umbrella.h"; sourceTree = "<group>"; };
-		FE45286575B77C6E99470FBF2A25684D /* Pods_Tufoli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tufoli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1556EDE5C841E9ADB8A63C3D28FE34AF /* MarqueeLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.debug.xcconfig; sourceTree = "<group>"; };
+		23070EF0A886F5D02BB8F7EB7D4F61E7 /* MarqueeLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.release.xcconfig; sourceTree = "<group>"; };
+		4DFF74611856745EC6173E3DC3564222 /* MarqueeLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarqueeLabel.swift; path = Sources/MarqueeLabel.swift; sourceTree = "<group>"; };
+		51905159D854BC3FF024C6E3CB484ED3 /* MarqueeLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-prefix.pch"; sourceTree = "<group>"; };
+		5B998ECD3ADFB0B918FFF5A1E432D11B /* MarqueeLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-umbrella.h"; sourceTree = "<group>"; };
+		6B09FD3233EE3BD2E2168089F5AAD532 /* Pods-Tufoli-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tufoli-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7DDCB50340824ACBAD9D9236E6D0DE2F /* MarqueeLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MarqueeLabel.modulemap; sourceTree = "<group>"; };
+		82058E7407200DF1882C6FA9E445864E /* MarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarqueeLabel-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A07EB8A852DBC64E21CDEBF3D38ED2F0 /* Pods-Tufoli-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tufoli-dummy.m"; sourceTree = "<group>"; };
+		A1E99F22209669E538EAFD68D7F10900 /* Pods-Tufoli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tufoli.debug.xcconfig"; sourceTree = "<group>"; };
+		A8132329019F65A7B43EB853CAE8BED4 /* Pods-Tufoli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tufoli.release.xcconfig"; sourceTree = "<group>"; };
+		CDE851B131EF72B01DB477D7D938CEC2 /* Pods-Tufoli-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tufoli-acknowledgements.plist"; sourceTree = "<group>"; };
+		CF0AA9FBFBDB70858C030769541505ED /* libMarqueeLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMarqueeLabel.a; path = libMarqueeLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C01B824492EC935FE6B292653BBD65 /* Pods-Tufoli-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tufoli-umbrella.h"; sourceTree = "<group>"; };
+		EDD5F85F547DDC5B374C94E2A1E49328 /* Pods-Tufoli.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tufoli.modulemap"; sourceTree = "<group>"; };
+		FE45286575B77C6E99470FBF2A25684D /* libPods-Tufoli.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Tufoli.a"; path = "libPods-Tufoli.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4274CA0E731AECC68C24808C7E6703AA /* Frameworks */ = {
+		1A404F3A1EE15FB58D72261DEC41571A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA6B7B11EAE51C6E3453876018130527 /* Foundation.framework in Frameworks */,
-				CADD2A1613A4CBD5023DD8ECD06DFBCC /* QuartzCore.framework in Frameworks */,
-				E771CDF7837319A49468CC35D18D8434 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DEC34DFC3AF8FE738768FA6C8046C097 /* Frameworks */ = {
+		ED960EC54D6AAE36513FDAFBC2402993 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3205A3745A590CC597277000B9E02223 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
+		51C149E7CEBC9373F877ECE3373D9B18 /* Pods-Tufoli */ = {
 			isa = PBXGroup;
 			children = (
-				F0A778C0229E9BF1FD97896B93F3272B /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		589BFB0EA96AEC6C36A787B2E2407EBE /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8260F543F69CABC4B9AD49D707902DAB /* Pods-Tufoli */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		8260F543F69CABC4B9AD49D707902DAB /* Pods-Tufoli */ = {
-			isa = PBXGroup;
-			children = (
-				B14BB4BBE37AB16B3AAB6DCA502775E5 /* Pods-Tufoli.modulemap */,
-				753CA77CD6AAFFFC0FC392B288DE6EA2 /* Pods-Tufoli-acknowledgements.markdown */,
-				B344C801AA85D06A60BF46508259E9A0 /* Pods-Tufoli-acknowledgements.plist */,
-				4F0CA20939CA623D7F0D5084A97BBAE4 /* Pods-Tufoli-dummy.m */,
-				6C83CBE31E4DACCB9D074D49A54F9EC2 /* Pods-Tufoli-frameworks.sh */,
-				9761B00DA2840A56DC6AE3BBDBDD812C /* Pods-Tufoli-Info.plist */,
-				EBBA36F2740C19A731FCFF88024F6DF6 /* Pods-Tufoli-umbrella.h */,
-				517A0F5C4B485629FE9A6BD39789E37F /* Pods-Tufoli.debug.xcconfig */,
-				60A5B9AA140C309AA089C603F55296AA /* Pods-Tufoli.release.xcconfig */,
+				EDD5F85F547DDC5B374C94E2A1E49328 /* Pods-Tufoli.modulemap */,
+				6B09FD3233EE3BD2E2168089F5AAD532 /* Pods-Tufoli-acknowledgements.markdown */,
+				CDE851B131EF72B01DB477D7D938CEC2 /* Pods-Tufoli-acknowledgements.plist */,
+				A07EB8A852DBC64E21CDEBF3D38ED2F0 /* Pods-Tufoli-dummy.m */,
+				D0C01B824492EC935FE6B292653BBD65 /* Pods-Tufoli-umbrella.h */,
+				A1E99F22209669E538EAFD68D7F10900 /* Pods-Tufoli.debug.xcconfig */,
+				A8132329019F65A7B43EB853CAE8BED4 /* Pods-Tufoli.release.xcconfig */,
 			);
 			name = "Pods-Tufoli";
 			path = "Target Support Files/Pods-Tufoli";
 			sourceTree = "<group>";
 		};
-		9F0CEE14040EFF3779488044E693BDC8 /* Products */ = {
+		6AB1448C80EFB061F9E0D9F7D5A2560A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel.framework */,
-				FE45286575B77C6E99470FBF2A25684D /* Pods_Tufoli.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		ADDCF4F254169A4BAF86B07D092EDF72 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				506C1805F0EAF8D2FDE3D524C708E880 /* MarqueeLabel.modulemap */,
-				844DF49C3CAE0CCE0323406E8F1B01F8 /* MarqueeLabel-dummy.m */,
-				7CA86ABF5C2C99DA436C2E71CEA0D366 /* MarqueeLabel-Info.plist */,
-				D28151C7B9B53AC181A8CCA608A898BF /* MarqueeLabel-prefix.pch */,
-				5FAFCB43B643869D69EAE42616A6E549 /* MarqueeLabel-umbrella.h */,
-				46E50A1A1E7598D671663C90E2F9FF00 /* MarqueeLabel.debug.xcconfig */,
-				147D1E396BFD010C500D8F2D1A2CA557 /* MarqueeLabel.release.xcconfig */,
+				7DDCB50340824ACBAD9D9236E6D0DE2F /* MarqueeLabel.modulemap */,
+				82058E7407200DF1882C6FA9E445864E /* MarqueeLabel-dummy.m */,
+				51905159D854BC3FF024C6E3CB484ED3 /* MarqueeLabel-prefix.pch */,
+				5B998ECD3ADFB0B918FFF5A1E432D11B /* MarqueeLabel-umbrella.h */,
+				1556EDE5C841E9ADB8A63C3D28FE34AF /* MarqueeLabel.debug.xcconfig */,
+				23070EF0A886F5D02BB8F7EB7D4F61E7 /* MarqueeLabel.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MarqueeLabel";
 			sourceTree = "<group>";
 		};
-		CA0B97F54F054ED4E45E343B6AA388B1 /* MarqueeLabel */ = {
+		A68929551F7648DE6B35A7C7C9AABB37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A0FE1F280EBE6CD17CB11D260C4855F /* MarqueeLabel.swift */,
-				ADDCF4F254169A4BAF86B07D092EDF72 /* Support Files */,
+				CF0AA9FBFBDB70858C030769541505ED /* libMarqueeLabel.a */,
+				FE45286575B77C6E99470FBF2A25684D /* libPods-Tufoli.a */,
 			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC1D158EDD510F1E31BB163382982B31 /* MarqueeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				4DFF74611856745EC6173E3DC3564222 /* MarqueeLabel.swift */,
+				6AB1448C80EFB061F9E0D9F7D5A2560A /* Support Files */,
+			);
+			name = MarqueeLabel;
 			path = MarqueeLabel;
 			sourceTree = "<group>";
 		};
@@ -146,27 +114,32 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				F89CF82BFB6B29D57B3ED666A4980FA6 /* Pods */,
-				9F0CEE14040EFF3779488044E693BDC8 /* Products */,
-				589BFB0EA96AEC6C36A787B2E2407EBE /* Targets Support Files */,
+				A68929551F7648DE6B35A7C7C9AABB37 /* Products */,
+				E70DD44DC5CFA9B7EFFFC37218665684 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		F0A778C0229E9BF1FD97896B93F3272B /* iOS */ = {
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */,
-				9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */,
-				8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */,
 			);
-			name = iOS;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E70DD44DC5CFA9B7EFFFC37218665684 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51C149E7CEBC9373F877ECE3373D9B18 /* Pods-Tufoli */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		F89CF82BFB6B29D57B3ED666A4980FA6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CA0B97F54F054ED4E45E343B6AA388B1 /* MarqueeLabel */,
+				AC1D158EDD510F1E31BB163382982B31 /* MarqueeLabel */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -174,19 +147,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3076D331E9F18C1C52553382CDD01DA8 /* Headers */ = {
+		3837EA4600D6F21FBDD1D261DA9E9B28 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD503BE4798FC30D23AC747146D39FE2 /* MarqueeLabel-umbrella.h in Headers */,
+				BB10447BD49BA68DFE44BD1D2210369F /* MarqueeLabel-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		85977E4F7F5031A54FE5C895BC56FCAF /* Headers */ = {
+		B49A157B12EAA1495B61BA8278075F5B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BBF4D7328316C253CF3EAE49CEC95C1 /* Pods-Tufoli-umbrella.h in Headers */,
+				7F9399D1219F93649FF2B01E2DFFFB44 /* Pods-Tufoli-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,31 +168,30 @@
 /* Begin PBXNativeTarget section */
 		1504A4069354B4AA90146AE23FF10497 /* Pods-Tufoli */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 51957BAFBD78DA16867F3F45473DBDC7 /* Build configuration list for PBXNativeTarget "Pods-Tufoli" */;
+			buildConfigurationList = 2602333D2AEFBCDD30F3273657ACC7B5 /* Build configuration list for PBXNativeTarget "Pods-Tufoli" */;
 			buildPhases = (
-				85977E4F7F5031A54FE5C895BC56FCAF /* Headers */,
-				C23E7B94BF381BD7217733A089099A76 /* Sources */,
-				DEC34DFC3AF8FE738768FA6C8046C097 /* Frameworks */,
-				BBD42278DCCDC6D08D6C63FB9E56AAD3 /* Resources */,
+				B49A157B12EAA1495B61BA8278075F5B /* Headers */,
+				CCD4AB9F03A711A7F6C6C5835FDD50CE /* Sources */,
+				1A404F3A1EE15FB58D72261DEC41571A /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1F02446717D73369976E948F697A554B /* PBXTargetDependency */,
+				12941941A3169C51E97FC8012D78563F /* PBXTargetDependency */,
 			);
 			name = "Pods-Tufoli";
 			productName = "Pods-Tufoli";
-			productReference = FE45286575B77C6E99470FBF2A25684D /* Pods_Tufoli.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = FE45286575B77C6E99470FBF2A25684D /* libPods-Tufoli.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		C23DB88E45B0ED14F0C8827BE9C46C95 /* MarqueeLabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 25360692F94D05B6B4344D370C7EC6AA /* Build configuration list for PBXNativeTarget "MarqueeLabel" */;
+			buildConfigurationList = 9F69A873CAA8E7DCEBCAF08DB2E2B6E4 /* Build configuration list for PBXNativeTarget "MarqueeLabel" */;
 			buildPhases = (
-				3076D331E9F18C1C52553382CDD01DA8 /* Headers */,
-				8FEEA90DA6EE49996DA2C10407C82C74 /* Sources */,
-				4274CA0E731AECC68C24808C7E6703AA /* Frameworks */,
-				888A2E430615987F208E1A0B7610045B /* Resources */,
+				3837EA4600D6F21FBDD1D261DA9E9B28 /* Headers */,
+				787447009C67A9E464FBA156B800F85F /* Sources */,
+				ED960EC54D6AAE36513FDAFBC2402993 /* Frameworks */,
+				378C41C329B8379A234F9DBDE5A8B5A9 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
@@ -227,8 +199,8 @@
 			);
 			name = MarqueeLabel;
 			productName = MarqueeLabel;
-			productReference = CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = CF0AA9FBFBDB70858C030769541505ED /* libMarqueeLabel.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -237,7 +209,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -248,7 +220,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 9F0CEE14040EFF3779488044E693BDC8 /* Products */;
+			productRefGroup = A68929551F7648DE6B35A7C7C9AABB37 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -258,53 +230,86 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		888A2E430615987F208E1A0B7610045B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* Begin PBXShellScriptBuildPhase section */
+		378C41C329B8379A234F9DBDE5A8B5A9 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BBD42278DCCDC6D08D6C63FB9E56AAD3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/MarqueeLabel/MarqueeLabel.modulemap",
+				"${PODS_ROOT}/Headers/Public/MarqueeLabel/MarqueeLabel-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MarqueeLabel/MarqueeLabel.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/MarqueeLabel/MarqueeLabel-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-/* End PBXResourcesBuildPhase section */
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8FEEA90DA6EE49996DA2C10407C82C74 /* Sources */ = {
+		787447009C67A9E464FBA156B800F85F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADE8E38AE2FC314562F857E3D97467C4 /* MarqueeLabel-dummy.m in Sources */,
-				C8BB2EAEB3F03D521DC374327ADD7FE7 /* MarqueeLabel.swift in Sources */,
+				BA0FA7AEED9A08D0637E014E27929332 /* MarqueeLabel-dummy.m in Sources */,
+				9D8C90542A8D3D93A786E37F4F763D61 /* MarqueeLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C23E7B94BF381BD7217733A089099A76 /* Sources */ = {
+		CCD4AB9F03A711A7F6C6C5835FDD50CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				669F0D055CF438F3FD7D3F6CFAE14D76 /* Pods-Tufoli-dummy.m in Sources */,
+				196A9D2321E8F8659C66881FE74FFBA2 /* Pods-Tufoli-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1F02446717D73369976E948F697A554B /* PBXTargetDependency */ = {
+		12941941A3169C51E97FC8012D78563F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MarqueeLabel;
 			target = C23DB88E45B0ED14F0C8827BE9C46C95 /* MarqueeLabel */;
-			targetProxy = BBDB177F71339E79026944210A346D7A /* PBXContainerItemProxy */;
+			targetProxy = 42D43FF2651625315730ABF097360A85 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		36FF01F8C83A40508E2581254C1CEACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8132329019F65A7B43EB853CAE8BED4 /* Pods-Tufoli.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tufoli/Pods-Tufoli.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		71243899B61152433AAE34EE86456EE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -433,158 +438,85 @@
 			};
 			name = Debug;
 		};
-		7B8A3A9687BBD5AAA4A17D30EC76AB4D /* Debug */ = {
+		9F85295C07D31C24A390FB02B1323C59 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 517A0F5C4B485629FE9A6BD39789E37F /* Pods-Tufoli.debug.xcconfig */;
+			baseConfigurationReference = 23070EF0A886F5D02BB8F7EB7D4F61E7 /* MarqueeLabel.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Tufoli/Pods-Tufoli-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Tufoli/Pods-Tufoli.modulemap";
+				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/MarqueeLabel/MarqueeLabel.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		E3D8A34FFD2E71C7D7F9BD0D274A9055 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60A5B9AA140C309AA089C603F55296AA /* Pods-Tufoli.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Tufoli/Pods-Tufoli-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Tufoli/Pods-Tufoli.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		ECC08E57AEA683AFC3790182698A136B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46E50A1A1E7598D671663C90E2F9FF00 /* MarqueeLabel.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = MarqueeLabel;
 				PRODUCT_NAME = MarqueeLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		ED4651886838D46F352991BCBF13A018 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 147D1E396BFD010C500D8F2D1A2CA557 /* MarqueeLabel.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
-				PRODUCT_MODULE_NAME = MarqueeLabel;
-				PRODUCT_NAME = MarqueeLabel;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		C5D2C62B20593970AE50A52B22A09915 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1E99F22209669E538EAFD68D7F10900 /* Pods-Tufoli.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tufoli/Pods-Tufoli.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9C1DCAF80FF188481947BE2141DB574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1556EDE5C841E9ADB8A63C3D28FE34AF /* MarqueeLabel.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = Headers/Public/MarqueeLabel/MarqueeLabel.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MarqueeLabel;
+				PRODUCT_NAME = MarqueeLabel;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		25360692F94D05B6B4344D370C7EC6AA /* Build configuration list for PBXNativeTarget "MarqueeLabel" */ = {
+		2602333D2AEFBCDD30F3273657ACC7B5 /* Build configuration list for PBXNativeTarget "Pods-Tufoli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ECC08E57AEA683AFC3790182698A136B /* Debug */,
-				ED4651886838D46F352991BCBF13A018 /* Release */,
+				C5D2C62B20593970AE50A52B22A09915 /* Debug */,
+				36FF01F8C83A40508E2581254C1CEACF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -598,11 +530,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		51957BAFBD78DA16867F3F45473DBDC7 /* Build configuration list for PBXNativeTarget "Pods-Tufoli" */ = {
+		9F69A873CAA8E7DCEBCAF08DB2E2B6E4 /* Build configuration list for PBXNativeTarget "MarqueeLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7B8A3A9687BBD5AAA4A17D30EC76AB4D /* Debug */,
-				E3D8A34FFD2E71C7D7F9BD0D274A9055 /* Release */,
+				C9C1DCAF80FF188481947BE2141DB574 /* Debug */,
+				9F85295C07D31C24A390FB02B1323C59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

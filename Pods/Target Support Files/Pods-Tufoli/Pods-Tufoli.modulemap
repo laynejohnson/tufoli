@@ -1,4 +1,4 @@
-framework module Pods_Tufoli {
+module Pods_Tufoli {
   umbrella header "Pods-Tufoli-umbrella.h"
 
   export *

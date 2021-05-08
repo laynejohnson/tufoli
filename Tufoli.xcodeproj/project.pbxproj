@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FC7D00549D4C7A86CA4831E /* Pods_Tufoli.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A5688079FBA38C1F717717 /* Pods_Tufoli.framework */; };
+		9F29AE2D08EAD58AEC318986 /* libPods-Tufoli.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D724B65212BB6CC2DBD9278 /* libPods-Tufoli.a */; };
 		E83A0B772639CA3C00EACDCF /* twinkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B742639CA3C00EACDCF /* twinkle.mp3 */; };
 		E83A0B782639CA3C00EACDCF /* sparkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B752639CA3C00EACDCF /* sparkle.mp3 */; };
 		E83A0B792639CA3C00EACDCF /* tonk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B762639CA3C00EACDCF /* tonk.mp3 */; };
@@ -35,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		46F980CED90A4C318B9E5ABC /* Pods-Tufoli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tufoli.debug.xcconfig"; path = "Target Support Files/Pods-Tufoli/Pods-Tufoli.debug.xcconfig"; sourceTree = "<group>"; };
-		65A5688079FBA38C1F717717 /* Pods_Tufoli.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tufoli.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D724B65212BB6CC2DBD9278 /* libPods-Tufoli.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tufoli.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87060F27C81D7CA27B0E7D2A /* Pods-Tufoli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tufoli.release.xcconfig"; path = "Target Support Files/Pods-Tufoli/Pods-Tufoli.release.xcconfig"; sourceTree = "<group>"; };
 		E83A0B742639CA3C00EACDCF /* twinkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = twinkle.mp3; sourceTree = "<group>"; };
 		E83A0B752639CA3C00EACDCF /* sparkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sparkle.mp3; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC7D00549D4C7A86CA4831E /* Pods_Tufoli.framework in Frameworks */,
+				9F29AE2D08EAD58AEC318986 /* libPods-Tufoli.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 		4E769101FF267714E2B21461 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				65A5688079FBA38C1F717717 /* Pods_Tufoli.framework */,
+				5D724B65212BB6CC2DBD9278 /* libPods-Tufoli.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,7 +226,6 @@
 				E8E5CEBB261B3B7A007D39D4 /* Sources */,
 				E8E5CEBC261B3B7A007D39D4 /* Frameworks */,
 				E8E5CEBD261B3B7A007D39D4 /* Resources */,
-				B7E041A23511DD9B26F91C7A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,23 +296,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B7E041A23511DD9B26F91C7A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tufoli/Pods-Tufoli-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Tufoli/Pods-Tufoli-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tufoli/Pods-Tufoli-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BE163C990B3F485F634B5135 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
