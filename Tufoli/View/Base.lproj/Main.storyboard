@@ -24,46 +24,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="B5F-sb-Beo">
                                 <rect key="frame" x="44" y="0.0" width="808" height="393"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SCC-Td-7mu">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SCC-Td-7mu" userLabel="View Stack View">
                                 <rect key="frame" x="44" y="10" width="808" height="383"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqC-rK-VDR" userLabel="Italian Radio View">
-                                        <rect key="frame" x="0.0" y="0.0" width="808" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="808" height="191.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italian_radio_background" translatesAutoresizingMaskIntoConstraints="NO" id="3RT-Rq-NkW">
-                                                <rect key="frame" x="0.0" y="-4" width="808" height="78"/>
-                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="78" id="Ba0-Em-63R"/>
-                                                    <constraint firstAttribute="width" constant="808" id="i9k-sj-lxs"/>
-                                                </constraints>
-                                            </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yyT-Ps-DKo" userLabel="Italian Radio Stack View">
-                                                <rect key="frame" x="19" y="-4" width="770" height="78"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="yyT-Ps-DKo" userLabel="Italian Radio Stack View">
+                                                <rect key="frame" x="19" y="31.5" width="770" height="128.5"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fzr-Lf-P4y" userLabel="Icon View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="102" height="78"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_icon" translatesAutoresizingMaskIntoConstraints="NO" id="4Ni-Ce-ivW" userLabel="Radio Icon">
-                                                                <rect key="frame" x="-10" y="12" width="122" height="54"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="54" id="wha-ZE-XpF"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstItem="4Ni-Ce-ivW" firstAttribute="centerY" secondItem="Fzr-Lf-P4y" secondAttribute="centerY" id="J8C-Sd-mut"/>
-                                                            <constraint firstItem="4Ni-Ce-ivW" firstAttribute="leading" secondItem="Fzr-Lf-P4y" secondAttribute="leading" constant="-10" id="dOb-sq-2He"/>
-                                                            <constraint firstItem="4Ni-Ce-ivW" firstAttribute="centerX" secondItem="Fzr-Lf-P4y" secondAttribute="centerX" id="gph-Rm-BYs"/>
-                                                        </constraints>
-                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIV-q7-v69" userLabel="Song Label View">
-                                                        <rect key="frame" x="102" y="0.0" width="432" height="78"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="770" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lucio Dalla – Washington" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqT-eh-3Sr" userLabel="Song Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                <rect key="frame" x="20" y="20" width="293" height="38.5"/>
-                                                                <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="24"/>
+                                                                <rect key="frame" x="232.5" y="5" width="305" height="40"/>
+                                                                <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="25"/>
                                                                 <color key="textColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -78,22 +53,21 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstItem="zqT-eh-3Sr" firstAttribute="leading" secondItem="yIV-q7-v69" secondAttribute="leading" constant="20" id="ZFF-QM-WGB"/>
-                                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zqT-eh-3Sr" secondAttribute="trailing" constant="20" symbolic="YES" id="gBO-hr-mBV"/>
-                                                            <constraint firstItem="zqT-eh-3Sr" firstAttribute="centerY" secondItem="yIV-q7-v69" secondAttribute="centerY" id="mHc-5e-EHa"/>
+                                                            <constraint firstItem="zqT-eh-3Sr" firstAttribute="centerY" secondItem="yIV-q7-v69" secondAttribute="centerY" id="23T-aA-QFi"/>
+                                                            <constraint firstItem="zqT-eh-3Sr" firstAttribute="centerX" secondItem="yIV-q7-v69" secondAttribute="centerX" id="tLM-3S-kmR"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xt7-yd-21x" userLabel="Radio Controls View">
-                                                        <rect key="frame" x="534" y="0.0" width="236" height="78"/>
+                                                        <rect key="frame" x="0.0" y="50.5" width="770" height="78"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-HM-ba4">
-                                                                <rect key="frame" x="34" y="9" width="168" height="60"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-HM-ba4" userLabel="Radio Controls Stack View">
+                                                                <rect key="frame" x="301" y="9" width="168" height="60"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nn2-36-btV" userLabel="Previous Button">
                                                                         <rect key="frame" x="0.0" y="0.0" width="38" height="60"/>
-                                                                        <state key="normal" image="previous"/>
+                                                                        <state key="normal" image="previous_blue"/>
                                                                         <connections>
-                                                                            <action selector="playPreviousSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8b4-gi-Hut"/>
+                                                                            <action selector="playPreviousSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pjh-b9-3Nl"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oC-SN-8Y0" userLabel="Play/Pause Button">
@@ -102,18 +76,18 @@
                                                                             <constraint firstAttribute="width" constant="60" id="BpD-K1-U0G"/>
                                                                             <constraint firstAttribute="height" constant="60" id="zyY-6p-Exx"/>
                                                                         </constraints>
-                                                                        <state key="normal" image="play button"/>
+                                                                        <state key="normal" image="play_blue_all"/>
                                                                         <state key="disabled" image="play_button"/>
-                                                                        <state key="selected" image="pause_button"/>
+                                                                        <state key="selected" image="pause_blue"/>
                                                                         <connections>
-                                                                            <action selector="radioOnOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xfv-2R-4xf"/>
+                                                                            <action selector="radioOnOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRO-YZ-Rvu"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPo-f3-lcW" userLabel="Next Button">
                                                                         <rect key="frame" x="130" y="0.0" width="38" height="60"/>
-                                                                        <state key="normal" image="next"/>
+                                                                        <state key="normal" image="next_blue"/>
                                                                         <connections>
-                                                                            <action selector="playNextSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FBH-f8-8wW"/>
+                                                                            <action selector="playNextSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="30B-Kn-aCE"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -121,36 +95,31 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="236" id="0hu-Jp-Mw1"/>
+                                                            <constraint firstAttribute="height" constant="78" id="0SH-hC-osA"/>
                                                             <constraint firstItem="hpl-HM-ba4" firstAttribute="centerX" secondItem="xt7-yd-21x" secondAttribute="centerX" id="62m-yu-lCo"/>
                                                             <constraint firstItem="hpl-HM-ba4" firstAttribute="centerY" secondItem="xt7-yd-21x" secondAttribute="centerY" id="gK1-NZ-c4o"/>
-                                                            <constraint firstAttribute="height" constant="78" id="vvl-Ur-1SI"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="height" constant="128.5" id="9ki-mf-j4A"/>
                                                     <constraint firstAttribute="width" constant="770" id="Dtu-IK-bgY"/>
-                                                    <constraint firstItem="xt7-yd-21x" firstAttribute="centerY" secondItem="yyT-Ps-DKo" secondAttribute="centerY" id="Pro-hI-7Lq"/>
+                                                    <constraint firstItem="hpl-HM-ba4" firstAttribute="centerX" secondItem="zqT-eh-3Sr" secondAttribute="centerX" id="jPz-rT-nLY"/>
+                                                    <constraint firstItem="xt7-yd-21x" firstAttribute="centerX" secondItem="yyT-Ps-DKo" secondAttribute="centerX" id="nmY-XQ-6zk"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="3RT-Rq-NkW" firstAttribute="centerX" secondItem="VqC-rK-VDR" secondAttribute="centerX" id="1DM-yG-QEd"/>
-                                            <constraint firstItem="yyT-Ps-DKo" firstAttribute="centerY" secondItem="VqC-rK-VDR" secondAttribute="centerY" id="4vp-l8-uPX"/>
-                                            <constraint firstItem="3RT-Rq-NkW" firstAttribute="centerY" secondItem="VqC-rK-VDR" secondAttribute="centerY" id="Jx3-xI-FSq"/>
                                             <constraint firstItem="yyT-Ps-DKo" firstAttribute="centerX" secondItem="VqC-rK-VDR" secondAttribute="centerX" id="KMa-Sn-yAj"/>
-                                            <constraint firstItem="3RT-Rq-NkW" firstAttribute="centerY" secondItem="VqC-rK-VDR" secondAttribute="centerY" id="S6x-je-wZL"/>
-                                            <constraint firstItem="yyT-Ps-DKo" firstAttribute="centerX" secondItem="VqC-rK-VDR" secondAttribute="centerX" id="UlJ-H2-xaR"/>
                                             <constraint firstItem="yyT-Ps-DKo" firstAttribute="centerY" secondItem="VqC-rK-VDR" secondAttribute="centerY" id="i1M-Yr-L0z"/>
-                                            <constraint firstItem="3RT-Rq-NkW" firstAttribute="centerX" secondItem="VqC-rK-VDR" secondAttribute="centerX" id="ngy-yg-H8S"/>
                                         </constraints>
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-He-91q">
-                                        <rect key="frame" x="0.0" y="70" width="808" height="313"/>
+                                        <rect key="frame" x="0.0" y="191.5" width="808" height="191.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="10" id="e8z-g3-Lof">
                                             <size key="itemSize" width="158" height="224"/>
@@ -205,7 +174,6 @@
                                     <constraint firstAttribute="trailing" secondItem="VqC-rK-VDR" secondAttribute="trailing" id="Lqk-i3-qLj"/>
                                     <constraint firstItem="VqC-rK-VDR" firstAttribute="leading" secondItem="SCC-Td-7mu" secondAttribute="leading" id="QnT-9W-aLC"/>
                                     <constraint firstItem="VqC-rK-VDR" firstAttribute="top" secondItem="SCC-Td-7mu" secondAttribute="top" id="wab-hg-Yaf"/>
-                                    <constraint firstItem="Zw1-He-91q" firstAttribute="width" secondItem="3RT-Rq-NkW" secondAttribute="width" id="zlt-vt-Lyh"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -224,10 +192,10 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Zw1-He-91q" id="3eV-An-297"/>
-                        <outlet property="radioButtonNext" destination="cPo-f3-lcW" id="Xog-ii-bUc"/>
-                        <outlet property="radioButtonPlayPause" destination="4oC-SN-8Y0" id="sIk-Jw-6AS"/>
-                        <outlet property="radioButtonPrevious" destination="nn2-36-btV" id="q8A-w7-Ca5"/>
-                        <outlet property="songLabel" destination="zqT-eh-3Sr" id="9HH-B1-sm7"/>
+                        <outlet property="radioButtonNext" destination="cPo-f3-lcW" id="e3c-0b-6ct"/>
+                        <outlet property="radioButtonPlayPause" destination="4oC-SN-8Y0" id="c5s-sm-JLi"/>
+                        <outlet property="radioButtonPrevious" destination="nn2-36-btV" id="NKC-Bw-sja"/>
+                        <outlet property="songLabel" destination="zqT-eh-3Sr" id="YMR-Ir-0Od"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -237,19 +205,17 @@
     </scenes>
     <designables>
         <designable name="zqT-eh-3Sr">
-            <size key="intrinsicContentSize" width="293" height="38.5"/>
+            <size key="intrinsicContentSize" width="305" height="40"/>
         </designable>
     </designables>
     <resources>
         <image name="background" width="966" height="388"/>
         <image name="card1" width="158" height="224"/>
         <image name="card_back_rings" width="158" height="224"/>
-        <image name="italian_radio_background" width="770" height="78"/>
-        <image name="next" width="38" height="29"/>
-        <image name="pause_button" width="37" height="37"/>
-        <image name="play button" width="59" height="59"/>
+        <image name="next_blue" width="38" height="29"/>
+        <image name="pause_blue" width="59" height="59"/>
+        <image name="play_blue_all" width="59" height="59"/>
         <image name="play_button" width="37" height="37"/>
-        <image name="previous" width="38" height="29"/>
-        <image name="radio_icon" width="57" height="57"/>
+        <image name="previous_blue" width="38" height="29"/>
     </resources>
 </document>

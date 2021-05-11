@@ -11,6 +11,7 @@
 		E83A0B772639CA3C00EACDCF /* twinkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B742639CA3C00EACDCF /* twinkle.mp3 */; };
 		E83A0B782639CA3C00EACDCF /* sparkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B752639CA3C00EACDCF /* sparkle.mp3 */; };
 		E83A0B792639CA3C00EACDCF /* tonk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B762639CA3C00EACDCF /* tonk.mp3 */; };
+		E85B9C74264ADF0400DD6535 /* ItalianRadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85B9C73264ADF0400DD6535 /* ItalianRadioModel.swift */; };
 		E89AA98426272A4E000B0289 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AA98326272A4E000B0289 /* CardModel.swift */; };
 		E89AA98826272B20000B0289 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AA98726272B20000B0289 /* Card.swift */; };
 		E89AA98B262741F3000B0289 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */; };
@@ -40,6 +41,7 @@
 		E83A0B742639CA3C00EACDCF /* twinkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = twinkle.mp3; sourceTree = "<group>"; };
 		E83A0B752639CA3C00EACDCF /* sparkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sparkle.mp3; sourceTree = "<group>"; };
 		E83A0B762639CA3C00EACDCF /* tonk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tonk.mp3; sourceTree = "<group>"; };
+		E85B9C73264ADF0400DD6535 /* ItalianRadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalianRadioModel.swift; sourceTree = "<group>"; };
 		E89AA98326272A4E000B0289 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		E89AA98726272B20000B0289 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -82,7 +84,6 @@
 				46F980CED90A4C318B9E5ABC /* Pods-Tufoli.debug.xcconfig */,
 				87060F27C81D7CA27B0E7D2A /* Pods-Tufoli.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -177,6 +178,7 @@
 				E89AA98326272A4E000B0289 /* CardModel.swift */,
 				E89AA98726272B20000B0289 /* Card.swift */,
 				E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */,
+				E85B9C73264ADF0400DD6535 /* ItalianRadioModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +329,7 @@
 			files = (
 				E8E5CEC7261B3B7A007D39D4 /* ViewController.swift in Sources */,
 				E89AA98426272A4E000B0289 /* CardModel.swift in Sources */,
+				E85B9C74264ADF0400DD6535 /* ItalianRadioModel.swift in Sources */,
 				E89AA98826272B20000B0289 /* Card.swift in Sources */,
 				E8E5CEC3261B3B7A007D39D4 /* AppDelegate.swift in Sources */,
 				E89AA98B262741F3000B0289 /* CardCollectionViewCell.swift in Sources */,

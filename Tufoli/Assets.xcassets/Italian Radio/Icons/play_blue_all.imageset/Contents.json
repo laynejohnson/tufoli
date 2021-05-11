@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "play_blue_all.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
