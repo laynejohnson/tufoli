@@ -7,6 +7,9 @@
 
 import UIKit
 import AVFoundation
+// MARK: Development TODOs:
+
+// TODO: Split song info into two lines
 
 // Set the view contoller as the object that is supplying the data to the collection + handle user events in collection view
 
@@ -36,8 +39,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var firstFlippedCardIndex:IndexPath?
     
     // Default song label
-    let defaultSongLabel = "Press play to vibe ✨ 🍝 🤙"
-    let italianDefaultSongLabel = "Premere play per vibe ✨ 🍝 🤙"
+    let defaultSongLabel = "Premere play to vibe. . . ✨🍝 "
+    let italianDefaultSongLabel = "Premere play per vibe. . . ✨ 🍝 "
     
     // MARK: - Initial View
     
