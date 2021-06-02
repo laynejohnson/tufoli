@@ -7,9 +7,12 @@
 
 import UIKit
 import AVFoundation
+
 // MARK: Development TODOs:
 
 // TODO: Split song info into two lines
+// TODO: Rebuild project in another file
+// TODO: Card flip bug
 
 // Set the view contoller as the object that is supplying the data to the collection + handle user events in collection view
 
