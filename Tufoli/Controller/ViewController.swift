@@ -13,7 +13,8 @@ import AVFoundation
 // TODO: Split song info into two lines
 // TODO: Rebuild project in another file
 // TODO: Card flip bug
-
+// TODO: make audio player bar at top
+// TODO: redo design
 // Set the view contoller as the object that is supplying the data to the collection + handle user events in collection view
 
 // The view controller should conform to both delegate and datasource protocols for the UI Collection View Element
