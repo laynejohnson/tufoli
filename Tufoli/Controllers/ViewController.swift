@@ -30,6 +30,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        navigationController?.navigationBar.isHidden = true
+        
         cardsArray = model.getCards()
         
         collectionView.dataSource = self
@@ -201,8 +203,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             }
         }
         if hasWon == true {
-            // Show alert
-            showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa")
+            
+            performSegue(withIdentifier: "PlayAgain", sender: self)
+            
+//            // Show alert
+//            showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa")
         }
     }
     
