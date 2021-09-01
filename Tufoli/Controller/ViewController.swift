@@ -100,12 +100,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
        return song
    }
 
-   func setSongLabel(song: String) {
-       // Modify song name string for display
-       let modifiedSong = song.replacingOccurrences(of: ".mp3", with: "", options: [.caseInsensitive, .regularExpression])
-       // Set song label
-       songLabel.text = modifiedSong
-   }
+//   func setSongLabel(song: String) {
+//       // Modify song name string for display
+//       let modifiedSong = song.replacingOccurrences(of: ".mp3", with: "", options: [.caseInsensitive, .regularExpression])
+//       // Set song label
+//       songLabel.text = modifiedSong
+//   }
 
    @IBAction func playPreviousSong(_ sender: UIButton) {
 
@@ -127,7 +127,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                let previousSong = italianRadioSongs[previousSongIndex]
                song = previousSong
                playSound(song)
-               setSongLabel(song: song)
+//               setSongLabel(song: song)
            } else {
 
                // Play previous song
@@ -139,7 +139,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
                // Set song label for next song
                // TODO: Refactor; add setSongLabel label function to playSound function
-               setSongLabel(song: previousSong)
+//               setSongLabel(song: previousSong)
            }
        } else {
 
@@ -161,7 +161,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
        } else if sender.isSelected == false {
            isPlaying = false
            audioPlayer?.pause()
-           setSongLabel(song: defaultSongLabel)
+//           setSongLabel(song: defaultSongLabel)
        }
    }
 
@@ -183,7 +183,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                let nextSong = italianRadioSongs[nextSongIndex]
                song = nextSong
                playSound(song)
-               setSongLabel(song: song)
+//               setSongLabel(song: song)
            } else {
                // Play next song
                let nextSong = italianRadioSongs[nextSongIndex]
@@ -194,7 +194,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
                // Set song label for next song
                // TODO: Refactor; add setSongLabel label function to playSound function
-               setSongLabel(song: nextSong)
+//               setSongLabel(song: nextSong)
            }
        } else {
            // Add animation to "Press play to vibe"

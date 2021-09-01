@@ -7,11 +7,6 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="MuseoModerno-VariableFont_wght.ttf">
-            <string>MuseoModerno-SemiBold_Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -21,105 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="SCC-Td-7mu" userLabel="View Stack View">
-                                <rect key="frame" x="44" y="10" width="808" height="383"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="SCC-Td-7mu" userLabel="View Stack View">
+                                <rect key="frame" x="44" y="23.5" width="821" height="367"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqC-rK-VDR" userLabel="Italian Radio View">
-                                        <rect key="frame" x="0.0" y="0.0" width="808" height="50"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="yyT-Ps-DKo" userLabel="Italian Radio Stack View">
-                                                <rect key="frame" x="19" y="-39.5" width="770" height="129"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIV-q7-v69" userLabel="Song Label View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="770" height="50.5"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lucio Dalla – Washington" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqT-eh-3Sr" userLabel="Song Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                <rect key="frame" x="257" y="8.5" width="256.5" height="33.5"/>
-                                                                <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="21"/>
-                                                                <color key="textColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
-                                                                        <real key="value" value="10"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
-                                                                        <real key="value" value="20"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstItem="zqT-eh-3Sr" firstAttribute="centerY" secondItem="yIV-q7-v69" secondAttribute="centerY" id="23T-aA-QFi"/>
-                                                            <constraint firstItem="zqT-eh-3Sr" firstAttribute="centerX" secondItem="yIV-q7-v69" secondAttribute="centerX" id="tLM-3S-kmR"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xt7-yd-21x" userLabel="Radio Controls View">
-                                                        <rect key="frame" x="0.0" y="51" width="770" height="78"/>
-                                                        <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-HM-ba4" userLabel="Radio Controls Stack View">
-                                                                <rect key="frame" x="295" y="9" width="180" height="60"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nn2-36-btV" userLabel="Previous Button">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="60"/>
-                                                                        <state key="normal" image="previous_blue"/>
-                                                                        <connections>
-                                                                            <action selector="playPreviousSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pjh-b9-3Nl"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oC-SN-8Y0" userLabel="Play/Pause Button">
-                                                                        <rect key="frame" x="54" y="0.0" width="60" height="60"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="60" id="BpD-K1-U0G"/>
-                                                                            <constraint firstAttribute="height" constant="60" id="zyY-6p-Exx"/>
-                                                                        </constraints>
-                                                                        <state key="normal" image="play_blue"/>
-                                                                        <state key="disabled" image="play_button"/>
-                                                                        <state key="selected" image="pause_blue"/>
-                                                                        <connections>
-                                                                            <action selector="radioOnOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRO-YZ-Rvu"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPo-f3-lcW" userLabel="Next Button">
-                                                                        <rect key="frame" x="130" y="0.0" width="50" height="60"/>
-                                                                        <state key="normal" image="next_button"/>
-                                                                        <connections>
-                                                                            <action selector="playNextSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="30B-Kn-aCE"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="78" id="0SH-hC-osA"/>
-                                                            <constraint firstItem="hpl-HM-ba4" firstAttribute="centerX" secondItem="xt7-yd-21x" secondAttribute="centerX" id="62m-yu-lCo"/>
-                                                            <constraint firstItem="hpl-HM-ba4" firstAttribute="centerY" secondItem="xt7-yd-21x" secondAttribute="centerY" id="gK1-NZ-c4o"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128.5" id="9ki-mf-j4A"/>
-                                                    <constraint firstAttribute="width" constant="770" id="Dtu-IK-bgY"/>
-                                                    <constraint firstItem="hpl-HM-ba4" firstAttribute="centerX" secondItem="zqT-eh-3Sr" secondAttribute="centerX" id="jPz-rT-nLY"/>
-                                                    <constraint firstItem="xt7-yd-21x" firstAttribute="centerX" secondItem="yyT-Ps-DKo" secondAttribute="centerX" id="nmY-XQ-6zk"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="yyT-Ps-DKo" firstAttribute="centerX" secondItem="VqC-rK-VDR" secondAttribute="centerX" id="KMa-Sn-yAj"/>
-                                            <constraint firstItem="yyT-Ps-DKo" firstAttribute="centerY" secondItem="VqC-rK-VDR" secondAttribute="centerY" id="i1M-Yr-L0z"/>
-                                        </constraints>
-                                    </view>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-He-91q">
-                                        <rect key="frame" x="0.0" y="50" width="808" height="333"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-He-91q">
+                                        <rect key="frame" x="0.0" y="0.0" width="748" height="367"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="10" id="e8z-g3-Lof">
-                                            <size key="itemSize" width="158" height="224"/>
+                                            <size key="itemSize" width="158" height="231"/>
                                             <size key="estimatedItemSize" width="158" height="224"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -127,35 +31,23 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="5bU-aW-Z1h" customClass="CardCollectionViewCell" customModule="Tufoli" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="158" height="224"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="231"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ind-SD-Zed">
-                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="224"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="231"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-sj-7Vh">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card1" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-sj-7Vh">
                                                             <rect key="frame" x="0.0" y="5" width="158" height="224"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="224" id="9IG-nk-lq7"/>
-                                                                <constraint firstAttribute="width" constant="158" id="PgZ-iK-dEk"/>
-                                                            </constraints>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_back" translatesAutoresizingMaskIntoConstraints="NO" id="YOG-Gw-09V">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_back" translatesAutoresizingMaskIntoConstraints="NO" id="YOG-Gw-09V">
                                                             <rect key="frame" x="0.0" y="5" width="158" height="224"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="158" id="YCX-W1-545"/>
-                                                                <constraint firstAttribute="height" constant="224" id="qzB-eR-vXR"/>
-                                                            </constraints>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="9JM-sj-7Vh" firstAttribute="top" secondItem="Ind-SD-Zed" secondAttribute="top" constant="5" id="1Kd-1y-PLk"/>
-                                                        <constraint firstItem="YOG-Gw-09V" firstAttribute="top" secondItem="Ind-SD-Zed" secondAttribute="top" constant="5" id="8Kt-rE-YzR"/>
-                                                        <constraint firstItem="YOG-Gw-09V" firstAttribute="leading" secondItem="9JM-sj-7Vh" secondAttribute="leading" id="jh1-Kv-Q2R"/>
-                                                        <constraint firstItem="9JM-sj-7Vh" firstAttribute="leading" secondItem="Ind-SD-Zed" secondAttribute="leading" id="wk3-8k-vOa"/>
-                                                    </constraints>
                                                 </collectionViewCellContentView>
-                                                <size key="customSize" width="158" height="224"/>
+                                                <size key="customSize" width="158" height="231"/>
                                                 <connections>
                                                     <outlet property="backImageView" destination="YOG-Gw-09V" id="jEP-eI-xYb"/>
                                                     <outlet property="frontImageView" destination="9JM-sj-7Vh" id="pmc-Jr-zsR"/>
@@ -163,15 +55,39 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-HM-ba4" userLabel="Radio Controls Stack View">
+                                        <rect key="frame" x="762" y="0.0" width="59" height="367"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nn2-36-btV" userLabel="Previous Button">
+                                                <rect key="frame" x="10.5" y="0.0" width="38" height="109"/>
+                                                <state key="normal" image="previous"/>
+                                                <connections>
+                                                    <action selector="playPreviousSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pjh-b9-3Nl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oC-SN-8Y0" userLabel="Play/Pause Button">
+                                                <rect key="frame" x="0.0" y="129" width="59" height="109"/>
+                                                <state key="normal" image="play button"/>
+                                                <state key="disabled" image="play_button"/>
+                                                <state key="selected" image="pause_blue"/>
+                                                <connections>
+                                                    <action selector="radioOnOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRO-YZ-Rvu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPo-f3-lcW" userLabel="Next Button">
+                                                <rect key="frame" x="10.5" y="258" width="38" height="109"/>
+                                                <state key="normal" image="next">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playNextSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="30B-Kn-aCE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.82745098039215681" blue="0.0039215686274509803" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Zw1-He-91q" firstAttribute="width" secondItem="VqC-rK-VDR" secondAttribute="width" id="KwJ-X1-pex"/>
-                                    <constraint firstAttribute="trailing" secondItem="VqC-rK-VDR" secondAttribute="trailing" id="Lqk-i3-qLj"/>
-                                    <constraint firstItem="VqC-rK-VDR" firstAttribute="leading" secondItem="SCC-Td-7mu" secondAttribute="leading" id="QnT-9W-aLC"/>
-                                    <constraint firstItem="VqC-rK-VDR" firstAttribute="top" secondItem="SCC-Td-7mu" secondAttribute="top" id="wab-hg-Yaf"/>
-                                </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dececco_background" translatesAutoresizingMaskIntoConstraints="NO" id="Sp6-nC-mwt">
                                 <rect key="frame" x="44" y="207" width="808" height="0.0"/>
@@ -182,10 +98,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="SCC-Td-7mu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ls1-Ir-rEy"/>
-                            <constraint firstItem="SCC-Td-7mu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="oMI-V6-PlH"/>
-                            <constraint firstItem="SCC-Td-7mu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pe9-HV-9hI"/>
-                            <constraint firstItem="SCC-Td-7mu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="u7s-jN-TNA"/>
+                            <constraint firstItem="SCC-Td-7mu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C7X-lr-2iB"/>
+                            <constraint firstItem="SCC-Td-7mu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DRZ-ta-pJI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -193,7 +107,6 @@
                         <outlet property="radioButtonNext" destination="cPo-f3-lcW" id="e3c-0b-6ct"/>
                         <outlet property="radioButtonPlayPause" destination="4oC-SN-8Y0" id="c5s-sm-JLi"/>
                         <outlet property="radioButtonPrevious" destination="nn2-36-btV" id="NKC-Bw-sja"/>
-                        <outlet property="songLabel" destination="zqT-eh-3Sr" id="YMR-Ir-0Od"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -201,19 +114,14 @@
             <point key="canvasLocation" x="-203.57142857142856" y="104.34782608695653"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="zqT-eh-3Sr">
-            <size key="intrinsicContentSize" width="256.5" height="33.5"/>
-        </designable>
-    </designables>
     <resources>
         <image name="card1" width="158" height="224"/>
         <image name="card_back" width="158" height="224"/>
         <image name="dececco_background" width="896" height="414"/>
-        <image name="next_button" width="50" height="50"/>
+        <image name="next" width="38" height="29"/>
         <image name="pause_blue" width="59" height="59"/>
-        <image name="play_blue" width="59" height="59"/>
+        <image name="play button" width="59" height="59"/>
         <image name="play_button" width="37" height="37"/>
-        <image name="previous_blue" width="38" height="29"/>
+        <image name="previous" width="38" height="29"/>
     </resources>
 </document>
