@@ -214,7 +214,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func resetGame() {
         
         cardsArray = model.getCards()
-        
         firstFlippedCardIndex = nil
         
     }
