@@ -8,19 +8,14 @@
 import UIKit
 import AVFoundation
 
+ // TODO: Change alert to pop-up & add reset game
+ // TODO: Add intro/music screen
+
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     // MARK: - IBOutlets
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    //    @IBOutlet weak var songLabel: UILabel!
-    
-    @IBOutlet weak var radioButtonPrevious: UIButton!
-    
-    @IBOutlet weak var radioButtonPlayPause: UIButton!
-    
-    @IBOutlet weak var radioButtonNext: UIButton!
     
     // MARK: - Variables
     
@@ -28,10 +23,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var cardsArray = [Card]()
     
     var firstFlippedCardIndex:IndexPath?
-    
-    //    // Default song label
-    //    let defaultSongLabel = "Premere play to vibe. . . ✨🍝 "
-    //    let italianDefaultSongLabel = "Premere play per vibe. . . ✨ 🍝 "
     
     // MARK: - Initial View
     
@@ -78,54 +69,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return song
     }
     
-    //   func setSongLabel(song: String) {
-    //       // Modify song name string for display
-    //       let modifiedSong = song.replacingOccurrences(of: ".mp3", with: "", options: [.caseInsensitive, .regularExpression])
-    //       // Set song label
-    //       songLabel.text = modifiedSong
-    //   }
-    
-    //   @IBAction func playPreviousSong(_ sender: UIButton) {
-    //
-    //       if isPlaying == true {
-    //
-    //           // Get index of current song
-    //           print("Current song: \(song)")
-    //           let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
-    //           print("Song index: \(songIndex!)")
-    //
-    //           // Get index of previous song
-    //           var previousSongIndex = songIndex! - 1
-    //           print("previous song index: \(previousSongIndex)")
-    //
-    //           // Reset index at end of array
-    //           if previousSongIndex > italianRadioSongs.count - 1 || previousSongIndex < 0 {
-    //
-    //               previousSongIndex = italianRadioSongs.endIndex - 1
-    //               let previousSong = italianRadioSongs[previousSongIndex]
-    //               song = previousSong
-    //               playSound(song)
-    ////               setSongLabel(song: song)
-    //           } else {
-    //
-    //               // Play previous song
-    //               let previousSong = italianRadioSongs[previousSongIndex]
-    //               print("previous song: \(previousSong)")
-    //               song = previousSong
-    //               print("New Current Song: \(song)")
-    //               playSound(song)
-    //
-    //               // Set song label for next song
-    //               // TODO: Refactor; add setSongLabel label function to playSound function
-    ////               setSongLabel(song: previousSong)
-    //           }
-    //       } else {
-    //
-    //           // Add animation to "Press play to vibe"
-    //           print(defaultSongLabel)
-    //       }
-    //   }
-    
     @IBAction func soundOnOff(_ sender: UIButton) {
         
         // Toggle radio state
@@ -133,7 +76,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         if sender.isSelected == true {
             isPlaying = true
-            song = chooseSong()
+            song = italianRadioSongs[0]
             //           setSongLabel(song: song)
             playSound(song)
         } else if sender.isSelected == false {
@@ -142,43 +85,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             // setSongLabel(song: defaultSongLabel)
         }
     }
-    
-    //   @IBAction func playNextSong(_ sender: UIButton) {
-    //
-    //       if isPlaying == true {
-    //           // Get index of current song
-    //           print("Current song: \(song)")
-    //           let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
-    //           print("Song index: \(songIndex!)")
-    //
-    //           // Get index of next song
-    //           var nextSongIndex = songIndex! + 1
-    //           print("Next song index: \(nextSongIndex)")
-    //
-    //           // Reset index at end of array
-    //           if nextSongIndex > italianRadioSongs.count - 1 {
-    //               nextSongIndex = 0
-    //               let nextSong = italianRadioSongs[nextSongIndex]
-    //               song = nextSong
-    //               playSound(song)
-    ////               setSongLabel(song: song)
-    //           } else {
-    //               // Play next song
-    //               let nextSong = italianRadioSongs[nextSongIndex]
-    //               print("Next song: \(nextSong)")
-    //               song = nextSong
-    //               print("New Current Song: \(song)")
-    //               playSound(song)
-    //
-    //               // Set song label for next song
-    //               // TODO: Refactor; add setSongLabel label function to playSound function
-    ////               setSongLabel(song: nextSong)
-    //           }
-    //       } else {
-    //           // Add animation to "Press play to vibe"
-    //           print(defaultSongLabel)
-    //       }
-    //   }
     
     // MARK: - Collection View Delegate Methods
     
@@ -294,11 +200,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 break
             }
         }
-        
         if hasWon == true {
             // Show alert
             showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa")
         }
+    }
+    
+    func resetGame() {
+        
+        cardsArray = model.getCards()
+        
+        firstFlippedCardIndex = nil
+        
     }
     
     func showAlert(title:String, message:String) {
@@ -315,4 +228,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func swipeGesture(_ sender: UISwipeGestureRecognizer) {
+        print("Swipe left to reset game")
+        resetGame()
+    }
 }
