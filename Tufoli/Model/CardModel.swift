@@ -18,13 +18,10 @@ class CardModel {
         var generatedCards = [Card]()
         
         // Randomly generate 8 pairs of cards
-        
         while generatedNumbers.count < 8 {
             
             // Generate a random number
-            
             let randomNumber = Int.random(in: 1...13)
-            
             if generatedNumbers.contains(randomNumber) == false {
                 
                 // Create a two new card objects

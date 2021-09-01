@@ -64,7 +64,7 @@
                                                 <state key="disabled" image="play_button"/>
                                                 <state key="selected" image="pause_blue"/>
                                                 <connections>
-                                                    <action selector="radioOnOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRO-YZ-Rvu"/>
+                                                    <action selector="soundOnOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRO-YZ-Rvu"/>
                                                 </connections>
                                             </button>
                                         </subviews>
