@@ -162,7 +162,6 @@
 				E8E5CEC2261B3B7A007D39D4 /* AppDelegate.swift */,
 				E8E5CEC4261B3B7A007D39D4 /* SceneDelegate.swift */,
 				E8E5CECB261B3B7C007D39D4 /* Assets.xcassets */,
-				E8E5CECD261B3B7C007D39D4 /* LaunchScreen.storyboard */,
 				E8E5CED0261B3B7C007D39D4 /* Info.plist */,
 				E8E5CEDB261B4A13007D39D4 /* Fonts */,
 				E8E5CEDC261B4A20007D39D4 /* Sounds */,
@@ -183,6 +182,7 @@
 		E8E5CED8261B3D1F007D39D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E8E5CECD261B3B7C007D39D4 /* LaunchScreen.storyboard */,
 				E8E5CEC8261B3B7A007D39D4 /* Main.storyboard */,
 			);
 			path = View;

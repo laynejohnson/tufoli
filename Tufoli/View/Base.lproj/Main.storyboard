@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="SCC-Td-7mu" userLabel="View Stack View">
-                                <rect key="frame" x="44" y="23.5" width="821" height="367"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="SCC-Td-7mu" userLabel="View Stack View">
+                                <rect key="frame" x="44" y="0.0" width="821" height="393"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-He-91q">
-                                        <rect key="frame" x="0.0" y="0.0" width="748" height="367"/>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zw1-He-91q">
+                                        <rect key="frame" x="0.0" y="0.0" width="748" height="393"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="10" id="e8z-g3-Lof">
                                             <size key="itemSize" width="158" height="231"/>
@@ -55,32 +55,16 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-HM-ba4" userLabel="Radio Controls Stack View">
-                                        <rect key="frame" x="762" y="0.0" width="59" height="367"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hpl-HM-ba4" userLabel="Radio Controls Stack View">
+                                        <rect key="frame" x="762" y="0.0" width="59" height="393"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nn2-36-btV" userLabel="Previous Button">
-                                                <rect key="frame" x="10.5" y="0.0" width="38" height="109"/>
-                                                <state key="normal" image="previous"/>
-                                                <connections>
-                                                    <action selector="playPreviousSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pjh-b9-3Nl"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oC-SN-8Y0" userLabel="Play/Pause Button">
-                                                <rect key="frame" x="0.0" y="129" width="59" height="109"/>
-                                                <state key="normal" image="play button"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="393"/>
+                                                <state key="normal" image="noun_Radio_211987"/>
                                                 <state key="disabled" image="play_button"/>
                                                 <state key="selected" image="pause_blue"/>
                                                 <connections>
                                                     <action selector="radioOnOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRO-YZ-Rvu"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPo-f3-lcW" userLabel="Next Button">
-                                                <rect key="frame" x="10.5" y="258" width="38" height="109"/>
-                                                <state key="normal" image="next">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="playNextSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="30B-Kn-aCE"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -89,24 +73,27 @@
                                 <color key="backgroundColor" red="1" green="0.82745098039215681" blue="0.0039215686274509803" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dececco_background" translatesAutoresizingMaskIntoConstraints="NO" id="Sp6-nC-mwt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dececco_background" translatesAutoresizingMaskIntoConstraints="NO" id="Sp6-nC-mwt">
                                 <rect key="frame" x="44" y="207" width="808" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="SCC-Td-7mu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C7X-lr-2iB"/>
-                            <constraint firstItem="SCC-Td-7mu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DRZ-ta-pJI"/>
+                            <constraint firstItem="SCC-Td-7mu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="57o-NZ-4f8"/>
+                            <constraint firstItem="Sp6-nC-mwt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="AcA-bQ-SR3"/>
+                            <constraint firstItem="Sp6-nC-mwt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="207" id="BjK-hC-gVo"/>
+                            <constraint firstItem="SCC-Td-7mu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Bqa-jH-8RE"/>
+                            <constraint firstItem="SCC-Td-7mu" firstAttribute="leading" secondItem="Sp6-nC-mwt" secondAttribute="leading" id="PDn-Ww-973"/>
+                            <constraint firstItem="Sp6-nC-mwt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q5U-ES-idw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SCC-Td-7mu" secondAttribute="trailing" constant="-29" id="VCi-xZ-ltH"/>
+                            <constraint firstItem="Sp6-nC-mwt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="amG-LE-hef"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Zw1-He-91q" id="3eV-An-297"/>
-                        <outlet property="radioButtonNext" destination="cPo-f3-lcW" id="e3c-0b-6ct"/>
                         <outlet property="radioButtonPlayPause" destination="4oC-SN-8Y0" id="c5s-sm-JLi"/>
-                        <outlet property="radioButtonPrevious" destination="nn2-36-btV" id="NKC-Bw-sja"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,12 +103,10 @@
     </scenes>
     <resources>
         <image name="card1" width="158" height="224"/>
-        <image name="card_back" width="158" height="224"/>
+        <image name="card_back" width="166" height="232"/>
         <image name="dececco_background" width="896" height="414"/>
-        <image name="next" width="38" height="29"/>
+        <image name="noun_Radio_211987" width="100" height="100"/>
         <image name="pause_blue" width="59" height="59"/>
-        <image name="play button" width="59" height="59"/>
         <image name="play_button" width="37" height="37"/>
-        <image name="previous" width="38" height="29"/>
     </resources>
 </document>

@@ -25,7 +25,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    @IBOutlet weak var songLabel: UILabel!
+//    @IBOutlet weak var songLabel: UILabel!
     
     @IBOutlet weak var radioButtonPrevious: UIButton!
 
@@ -56,10 +56,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Set song label
 //        setSongLabel(song: defaultSongLabel)
-        setSongLabel(song: defaultSongLabel)
+//        setSongLabel(song: defaultSongLabel)
 
-        
-        
         // Set the view controller as the datasource and delegate of the collection view
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -156,7 +154,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
        if sender.isSelected == true {
            isPlaying = true
            song = italianRadioSongs[0]
-           setSongLabel(song: song)
+//           setSongLabel(song: song)
            playSound(song)
        } else if sender.isSelected == false {
            isPlaying = false
