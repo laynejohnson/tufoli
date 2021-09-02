@@ -37,8 +37,6 @@ class CardModel {
                 
                 // Add this number to the list of generated numbers
                 generatedNumbers.append(randomNumber)
-                
-                print(randomNumber)
             }
         }
         

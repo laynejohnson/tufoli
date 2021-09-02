@@ -8,8 +8,8 @@
 import UIKit
 import AVFoundation
 
- // TODO: Change alert to pop-up & add reset game
- // TODO: Add intro/music screen
+// TODO: Change alert to pop-up & add reset game
+// TODO: Add intro/music screen
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -53,7 +53,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             // Play the sound effect
             audioPlayer?.play()
+            
         } catch {
+            
             print("Could not summon audio player")
         }
     }
@@ -67,6 +69,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var isPlaying = false
     
     func chooseSong() -> String {
+        
         song = italianRadioSongs.randomElement()!
         return song
     }
@@ -77,11 +80,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         sender.isSelected.toggle()
         
         if sender.isSelected == true {
+            
             isPlaying = true
             song = italianRadioSongs[0]
             //           setSongLabel(song: song)
             playSound(song)
+            
         } else if sender.isSelected == false {
+            
             isPlaying = false
             audioPlayer?.pause()
             // setSongLabel(song: defaultSongLabel)
@@ -92,7 +98,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        // Stub methods. Number of items to display in a section; method returns integer.
+        // Number of items to display in a section
         
         // Return number of cards
         return cardsArray.count
@@ -100,6 +106,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         // This method is called when the collection view wants to use a cell/create a cell for a particular index
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         
@@ -109,7 +116,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
         // This method is called right before a cell gets displayed
+        
         // Configure the state of the cell based on card properties
         let cardCell = cell as? CardCollectionViewCell
         
@@ -117,7 +126,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let card = cardsArray[indexPath.row]
         
         cardCell?.configureCell(card: card)
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -138,7 +146,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 firstFlippedCardIndex = indexPath
                 
             }
+            
             else {
+                
                 // This is the second card
                 // Run comparison logic
                 checkForMatch(indexPath)
@@ -150,7 +160,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     // MARK: - Game Logic Methods
     
-    // _ allows parameter label to be omitted from function call
     func checkForMatch(_ secondFlippedCardIndex: IndexPath) {
         
         // Get the card objects from the two indices and see if they match
@@ -192,7 +201,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func checkForGameEnd() {
+        
         // Check for unmatched cards
+        
         // Assume the player has won, loop through all the cards to see if all are matched
         var hasWon = true
         
@@ -202,20 +213,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 break
             }
         }
+        
         if hasWon == true {
+            // TODO: Setup pop-up
+            // performSegue(withIdentifier: "PlayAgain", sender: self)
             
-            performSegue(withIdentifier: "PlayAgain", sender: self)
-            
-//            // Show alert
-//            showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa")
+            // Show alert
+            showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa")
         }
     }
     
     func resetGame() {
         
         cardsArray = model.getCards()
-        firstFlippedCardIndex = nil
         
+        // Reset first flipped card index
+        firstFlippedCardIndex = nil
     }
     
     func showAlert(title:String, message:String) {
@@ -223,8 +236,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // Create the alert
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        // TODO: Add handler code to reset game
-        let playAgainAction = UIAlertAction(title: "Play Again", style: .default, handler: nil)
+        // Alert action
+        let playAgainAction = UIAlertAction (title: "Play Again", style: .default) { [self] <#UIAlertAction#> in
+            self.resetGame()
+        }
         
         alert.addAction(playAgainAction)
         
@@ -232,7 +247,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         present(alert, animated: true, completion: nil)
     }
     
+    // Swipe to reset game
     @IBAction func swipeGesture(_ sender: UISwipeGestureRecognizer) {
+        
         print("Swipe left to reset game")
         resetGame()
     }
