@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-// TODO: Change alert to pop-up & add reset game
+// TODO: Change alert to pop-up
 // TODO: Add intro/music screen
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {

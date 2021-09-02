@@ -11,6 +11,7 @@
 		E83A0B772639CA3C00EACDCF /* twinkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B742639CA3C00EACDCF /* twinkle.mp3 */; };
 		E83A0B782639CA3C00EACDCF /* sparkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B752639CA3C00EACDCF /* sparkle.mp3 */; };
 		E83A0B792639CA3C00EACDCF /* tonk.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E83A0B762639CA3C00EACDCF /* tonk.mp3 */; };
+		E87B8F8926E11083008B185B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E87B8F8826E11083008B185B /* README.md */; };
 		E89AA98426272A4E000B0289 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AA98326272A4E000B0289 /* CardModel.swift */; };
 		E89AA98826272B20000B0289 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AA98726272B20000B0289 /* Card.swift */; };
 		E89AA98B262741F3000B0289 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */; };
@@ -40,6 +41,7 @@
 		E83A0B742639CA3C00EACDCF /* twinkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = twinkle.mp3; sourceTree = "<group>"; };
 		E83A0B752639CA3C00EACDCF /* sparkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sparkle.mp3; sourceTree = "<group>"; };
 		E83A0B762639CA3C00EACDCF /* tonk.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tonk.mp3; sourceTree = "<group>"; };
+		E87B8F8826E11083008B185B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E89AA98326272A4E000B0289 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		E89AA98726272B20000B0289 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		E89AA98A262741F3000B0289 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		E8E5CEB6261B3B7A007D39D4 = {
 			isa = PBXGroup;
 			children = (
+				E87B8F8826E11083008B185B /* README.md */,
 				E8E5CEC1261B3B7A007D39D4 /* Tufoli */,
 				E8E5CEC0261B3B7A007D39D4 /* Products */,
 				0D436A7590AD2CA49780DC6C /* Pods */,
@@ -278,6 +281,7 @@
 				E89AA992262A1608000B0289 /* Lucio Dalla - Washington.mp3 in Resources */,
 				E8E5CECC261B3B7C007D39D4 /* Assets.xcassets in Resources */,
 				E8E5CEED261B56DA007D39D4 /* Lexend-ExtraBold.ttf in Resources */,
+				E87B8F8926E11083008B185B /* README.md in Resources */,
 				E8E5CEEC261B56DA007D39D4 /* Lexend-SemiBold.ttf in Resources */,
 				E8E5CEE9261B56DA007D39D4 /* Lexend-Regular.ttf in Resources */,
 				E8E5CECA261B3B7A007D39D4 /* Main.storyboard in Resources */,
