@@ -219,7 +219,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             // performSegue(withIdentifier: "PlayAgain", sender: self)
             
             // Show alert
-            showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa")
+            showAlert(title: "Congratulazioni! Sei una vera Pastaia!", message: "Nonni è orgogliosa 🤩")
         }
     }
     
@@ -229,6 +229,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // Reset first flipped card index
         firstFlippedCardIndex = nil
+        
+        // Reload collection view
+        collectionView.reloadData()
     }
     
     func showAlert(title:String, message:String) {
@@ -237,8 +240,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         // Alert action
-        let playAgainAction = UIAlertAction (title: "Play Again", style: .default) { [self] <#UIAlertAction#> in
-            self.resetGame()
+        let playAgainAction = UIAlertAction(title: "Play Again", style: .default) { [self] playAgainAction in
+            
+            // Perform UI update in main thread
+            DispatchQueue.main.async {
+                self.resetGame()
+            }
         }
         
         alert.addAction(playAgainAction)
@@ -250,7 +257,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // Swipe to reset game
     @IBAction func swipeGesture(_ sender: UISwipeGestureRecognizer) {
         
-        print("Swipe left to reset game")
+        print("Game has been reset")
+        
+        // Reset game
         resetGame()
     }
 }
